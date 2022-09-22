@@ -1,3 +1,91 @@
 body {
-    background-color: #E0E0E0;
+    font-family: 'Arial', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
+
+/*---[start] Main Layout---*/
+.mainContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+}
+section.contentWrapper {
+    flex: 1 1 auto;
+    background: #f3f3f3;
+}
+footer.footerWrapper {
+    background: #007fe0;
+    color: white;
+    padding: 15px 0;
+    margin: 0px;
+    text-align: center;
+}
+header.headerWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+/*---[end] Main Layout---*/
+
+/*---[start] Header Block---*/
+header.headerWrapper .companyIcon {
+    line-height: 0;
+}
+header.headerWrapper .companyIcon img {
+    max-width: 250px;
+}
+header.headerWrapper .functionBox {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+.functionBox > .btn {
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 5px 5px 0 0;
+}
+.functionBox > .btn > svg {
+    height: 1.3em;
+}
+.functionBox > .btn > span {
+    display: none;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+/*hover show text*/
+.functionBox > .btn:hover > span {
+    display: inline-block;
+    transition: all 400ms ease-out;
+}
+
+.functionBox > .btn.langBtn {
+    position: relative;
+}
+.langOptionPannel {
+    display:none;
+    position: absolute;
+    top: calc(1.5em + 6px + 6px); /*langBtn Text Height + padding top and bottom*/
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.btn.langBtn:hover, .langOptionPannel {
+    background: #0067b3;
+    color: white;
+}
+.btn.langBtn:hover .langOptionPannel {
+    display: block;
+}
+.langOption {
+    padding: 3px 0px;
+}
+.langOption:hover, .langOption.active {
+    background: #0b7fde
+}
+/*---[end]  Header Block---*/
