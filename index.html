@@ -7,12 +7,58 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./libs/fontawesome-6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./libs/slick-1.8.1/css/slick.css">
 
-    <script src="./libs/js/jquery-3.6.1/jquery-3.6.1.min.js"></script>
-    
+    <script src="./libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.min.js"></script>
+    <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.messagestore.min.js"></script>
+    <script src="./libs/fontawesome-6.2.0/js/all.min.js"></script>
+    <script src="./libs/slick-1.8.1/js/slick.min.js"></script>
+
     <script src="./assets/js/index.js"></script>
 </head>
 <body>
-    Hello World
+    <div class='mainContainer'>
+        <header class="headerWrapper">
+            <div class="companyIcon">
+                <img src="https://dummyimage.com/500x160/000/fff.png&text=company+logo" />
+            </div>
+            <div class="functionBox">
+                <div class="btn loginBtn">
+                    <i class="fa-regular fa-user"></i>
+                    <span>登入</span>
+                </div>
+                <div class="btn langBtn">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <span>語言</span>
+                    <div class="langOptionPannel">
+                        <div class="langOption active" value="en_TW">EN</div>
+                        <div class="langOption" value="zh_TW">繁</div>
+                        <div class="langOption" value="zh_CN">簡</div>
+                    </div>
+                </div>
+            </div>
+            <h1 data-i18n="title">Fallback text</h1>
+        </header>
+
+        <section class="contentWrapper">
+            <!--輪播-->
+            <div class="slideImageWrapper">
+                <div><img src="https://dummyimage.com/2000x400/000/fff.png&text=ad1" /></div>
+                <div><img src="https://dummyimage.com/2000x400/pink/fff.png&text=ad2" /></div>
+                <div><img src="https://dummyimage.com/2000x400/yelloow/fff.png&text=ad3" /></div>
+              </div>
+        </section>
+
+        <footer class="footerWrapper">
+            <div>Copyright © Yuanta Financial Holding Co., Ltd. All Rights Reserved.</div>
+            <div>最佳瀏覽器建議：IE11, Google Chrome, Firefox</div>
+        </footer>
+
+        <div class="goTop">
+        </div>
+    </div>
+
 </body>
 </html>
