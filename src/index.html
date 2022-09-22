@@ -8,11 +8,21 @@
 
     <link rel="stylesheet" href="./assets/css/main.css" />
 
-    <script src="./libs/js/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="./libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.min.js"></script>
+    <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.messagestore.min.js"></script>
     
     <script src="./assets/js/index.js"></script>
 </head>
 <body>
-    Hello World
+    <div id="langBox">
+        Language:
+        <select id="lang" onchange="changeLang(this.value)">
+            <option value="en_US" selected>English</option>
+            <option value="zh_TW">繁體中文</option>
+            <option value="zh_CN">簡體中文</option>
+        </select>
+    </div><br>
+    <h1 data-i18n="title">Fallback text</h1>
 </body>
 </html>
