@@ -1,4 +1,16 @@
 $(function() {
+  $('.slideImageWrapper').slick();
+
+  // click language option
+  $('.langOption').on('click', function(e) {
+    let locale = $(this).attr('value');
+    
+    $.i18n({
+      locale: locale
+    });
+    $('body').i18n();
+  });
+
   // 預設英文
   $.i18n({
     locale: 'en_US'
@@ -15,16 +27,3 @@ $(function() {
     $('body').i18n();
   });
 });
-
-/**
- * changeLang
- * 語系切換
- * 
- * @param {*} lang 
- */
-function changeLang(lang) {
-  $.i18n({
-    locale: lang
-  });
-  $('body').i18n();
-}
