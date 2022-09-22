@@ -1,0 +1,22 @@
+{
+  "name": "p0001",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://github.com/JaeyoLin/P0001",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaeyoLin/P0001.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaeyoLin/P0001/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
