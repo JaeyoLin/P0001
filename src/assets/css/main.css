@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /*---[start] Main Layout---*/
 .mainContainer {
     display: flex;
@@ -119,8 +124,9 @@ header.headerWrapper .functionBox {
 .slideImageWrapper div.slide3 {
     background-image: url("https://dummyimage.com/2000x400/28251c/ffffff.png&text=ad3");
 }
+
 /*mobile size*/
-@media all and (max-width: 480px) {
+@media only screen and (min-width: 600px) {
     .slideImageWrapper div.slideimg {
         height: 50vw;
         min-height: 180px;
@@ -140,7 +146,7 @@ header.headerWrapper .functionBox {
     align-items: stretch;
     justify-content: space-around;
 }
-.contentFlexWrap > div {
+.flexItem {
     flex: 1 1 auto;
     min-width: 150px;
     min-height: 140px;
@@ -164,6 +170,14 @@ header.headerWrapper .functionBox {
 }
 .contentSection.grayBk .title.bkline {
     background: #f7f7f7;
+}
+@media only screen and (max-width: 600px) {
+    .contentFlexWrap {
+        flex-flow: column;
+    }
+    .flexItem {
+        margin-bottom: 30px;
+    }
 }
 /*---[end] Content >> Bulletin---*/
 
@@ -207,3 +221,26 @@ header.headerWrapper .functionBox {
     position: relative;
 }
 /*---[end] Content >> Achievement---*/
+
+/*---Go to Top---*/
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    background: #000000;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+    opacity: 0.5;
+}
+  
+.back-to-top svg {
+    font-size: 24px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
