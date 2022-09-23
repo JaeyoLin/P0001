@@ -182,6 +182,22 @@ header.headerWrapper .functionBox {
 /*---[end] Content >> Bulletin---*/
 
 /*---[start] Content >> Statistic---*/
+.pieChartBox {
+    display: flex; 
+    flex-flow: row;
+    width: 100%;
+}
+.pieChartBox .description {
+    flex: 1;
+}
+.pieChartBox .chart {
+    width: 400px;
+}
+@media only screen and (max-width: 600px) {
+    .pieChartBox {
+        flex-flow: column-reverse;
+    }
+}
 /*---[end] Content >> Statistic---*/
 
 /*---[start] Content >> Achievement---*/
