@@ -1,5 +1,14 @@
 $(function() {
-  $('.slideImageWrapper').slick();
+  $('.slideImageWrapper').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    // fade: true,
+    cssEase: 'linear',
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
 
   // click language option
   $('.langOption').on('click', function(e) {
