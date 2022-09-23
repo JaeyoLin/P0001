@@ -5,6 +5,9 @@ $(function() {
   // Go to top 初始化
   goToTopInit();
 
+  // Pie Chart 初始化
+  pieChartInit();
+
   $('.slideImageWrapper').slick({
     dots: false,
     infinite: true,
@@ -83,5 +86,39 @@ function goToTopInit() {
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
     return false;
+  });
+}
+
+/**
+ * pieChartInit
+ * Pie Chart 初始化
+ * 
+ */
+function pieChartInit() {
+  const ctx = document.getElementById('myChart');
+  const data = {
+    datasets: [
+      {
+        data: [10, 20, 15, 5, 50],
+        backgroundColor: [ 'rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', ],
+        radius: '80%',
+      },
+    ],
+  };
+  const myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: data,
+    plugins: [ChartDataLabels],
+    options: {
+      plugins: {
+        datalabels: {
+          formatter: (value) => {
+            return value + '%';
+          },
+          anchor: 'end',
+          align: 'end',
+        }
+      }
+    }
   });
 }

@@ -17,6 +17,8 @@
     <script src="./libs/draggable-1.2.4/draggable_background.js"></script>
     <script src="./libs/fontawesome-6.2.0/js/all.min.js"></script>
     <script src="./libs/slick-1.8.1/js/slick.min.js"></script>
+    <script src="./libs/chart.js-3.9.1/chart.min.js"></script>
+    <script src="./libs/chartjs-plugin-datalabels-2.1.0/chartjs-plugin-datalabels.min.js"></script>
 
     <script src="./assets/js/config/common.js"></script>
     <script src="./assets/js/index.js"></script>
@@ -95,8 +97,11 @@
                 <div class="contentFlexWrap statisticWrapper">
                     <div class="flexItem">
                         <div class="title bkline" data-i18n="statistic_title_1">Structure</div>
-                        <div>
-                            <!--股東結構contents-->
+                        <div class="pieChartBox">
+                            <div class="description">1111</div>
+                            <div class="chart">
+                                <canvas id="myChart" width="400px" height="400px"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
