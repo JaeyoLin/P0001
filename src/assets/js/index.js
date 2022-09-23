@@ -13,6 +13,8 @@ $(function() {
   // click language option
   $('.langOption').on('click', function(e) {
     let locale = $(this).attr('value');
+    $('.langOption').removeClass('active');
+    $(this).addClass('active');
     
     $.i18n({
       locale: locale
@@ -35,4 +37,7 @@ $(function() {
     // 語系初始化
     $('body').i18n();
   });
+
+  // draggable bk
+  $('div.draggableBK').backgroundDraggable();
 });

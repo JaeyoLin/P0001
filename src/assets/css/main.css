@@ -14,7 +14,7 @@ body {
 }
 section.contentWrapper {
     flex: 1 1 auto;
-    background: #f3f3f3;
+    background: #ffffff;
 }
 footer.footerWrapper {
     background: #007fe0;
@@ -28,6 +28,16 @@ header.headerWrapper {
     flex-flow: row nowrap;
     align-items: center;
 }
+.contentWrapper .contentSection {
+    padding: 60px 0px;
+}
+.contentWrapper .contentSection .contentFlexWrap, .contentWrapper .contentSection .contentWrap {
+    max-width: 960px;
+    margin: auto;
+}
+.contentSection.grayBk {
+    background-color: #f7f7f7;
+}
 /*---[end] Main Layout---*/
 
 /*---[start] Header Block---*/
@@ -36,6 +46,7 @@ header.headerWrapper .companyIcon {
 }
 header.headerWrapper .companyIcon img {
     max-width: 250px;
+    width: 100%;
 }
 header.headerWrapper .functionBox {
     flex: 1 1 auto;
@@ -58,11 +69,11 @@ header.headerWrapper .functionBox {
     transition-delay: 0s;
     transition-duration: 0.4s;
 }
-/*hover show text*/
-.functionBox > .btn:hover > span {
+/*hover show text
+.functionBox > .btn:hover > span, .functionBox > .btn:active > span {
     display: inline-block;
     transition: all 400ms ease-out;
-}
+}*/
 
 .functionBox > .btn.langBtn {
     position: relative;
@@ -76,11 +87,11 @@ header.headerWrapper .functionBox {
     text-align: center;
     z-index: 1000;
 }
-.btn.langBtn:hover, .langOptionPannel {
+.btn.langBtn:hover, .btn.langBtn:active, .langOptionPannel {
     background: #0067b3;
     color: white;
 }
-.btn.langBtn:hover .langOptionPannel {
+.btn.langBtn:hover .langOptionPannel, .btn.langBtn:active .langOptionPannel {
     display: block;
 }
 .langOption {
@@ -90,3 +101,109 @@ header.headerWrapper .functionBox {
     background: #0b7fde
 }
 /*---[end]  Header Block---*/
+
+/*---[start] Content >> Slide Image---*/
+.slideImageWrapper div.slideimg {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center
+}
+/*設定輪播廣告圖檔區域*/
+.slideImageWrapper div.slide1 {
+    background-image: url("https://dummyimage.com/2000x400/e5e4df/000000.png&text=ad1");
+}
+.slideImageWrapper div.slide2 {
+    background-image: url("https://dummyimage.com/2000x400/a29c7a/ffffff.png&text=ad2");
+}
+.slideImageWrapper div.slide3 {
+    background-image: url("https://dummyimage.com/2000x400/28251c/ffffff.png&text=ad3");
+}
+/*mobile size*/
+@media all and (max-width: 480px) {
+    .slideImageWrapper div.slideimg {
+        height: 50vw;
+        min-height: 180px;
+        max-height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+/*---[end] Content >> Slide Image---*/
+
+
+/*---[start] Content >> Bulletin---*/
+.contentFlexWrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-around;
+}
+.contentFlexWrap > div {
+    flex: 1 1 auto;
+    min-width: 150px;
+    min-height: 140px;
+    margin: 5px 10px;
+    border: 1px solid #c3b893;
+    text-align: center;
+    padding: 15px 20px;
+}
+.contentSection .title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 20px;
+    text-align: center;
+}
+.contentSection .title.bkline {
+    position: relative;
+    top: calc(-0.5em - 20px);
+    overflow: hidden;
+    background: white;
+    display: inline-block;
+}
+.contentSection.grayBk .title.bkline {
+    background: #f7f7f7;
+}
+/*---[end] Content >> Bulletin---*/
+
+/*---[start] Content >> Statistic---*/
+/*---[end] Content >> Statistic---*/
+
+/*---[start] Content >> Achievement---*/
+.horizontalScrollWrap {
+    position: relative;
+}
+.horizontalScrollInner {
+    padding-top: 80px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+.horizontalScrollBg {
+    padding-top: 80px;
+    height: 350px;
+    position: absolute;
+    z-index: 0;
+    width: 120vw;
+    left: -5vw;
+    top: 0;
+    background-size: cover;
+    background-position: left center;
+    background-image: url('https://dummyimage.com/2424x574/d9f0ff/ffffff&text=big');
+}
+.horizontalScrollDraggable {
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 120vw;
+    left: -20vw;
+    min-height: 100px;
+    background: #ffffff57;
+}
+.contentWrap.achievementWrapper {
+    position: relative;
+}
+/*---[end] Content >> Achievement---*/

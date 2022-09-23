@@ -12,6 +12,7 @@
 
     <script src="./libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
     <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.min.js"></script>
+    <script src="./libs/draggable-1.2.4/draggable_background.js"></script>
     <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.messagestore.min.js"></script>
     <script src="./libs/fontawesome-6.2.0/js/all.min.js"></script>
     <script src="./libs/slick-1.8.1/js/slick.min.js"></script>
@@ -27,13 +28,11 @@
             <div class="functionBox">
                 <div class="btn loginBtn">
                     <i class="fa-regular fa-user"></i>
-                    <span>登入</span>
                 </div>
                 <div class="btn langBtn">
                     <i class="fa-solid fa-earth-americas"></i>
-                    <span>語言</span>
                     <div class="langOptionPannel">
-                        <div class="langOption active" value="en_TW">EN</div>
+                        <div class="langOption active" value="en_US">EN</div>
                         <div class="langOption" value="zh_TW">繁</div>
                         <div class="langOption" value="zh_CN">簡</div>
                     </div>
@@ -42,12 +41,69 @@
         </header>
 
         <section class="contentWrapper">
-            <!--輪播-->
+            <!--輪播-圖片設定在 main.css:設定輪播廣告圖檔區域 -->
             <div class="slideImageWrapper">
-                <div><img width="100%" src="https://dummyimage.com/2000x400/0080FF/000000.png&text=ad1" /></div>
-                <div><img width="100%" src="https://dummyimage.com/2000x400/F00078/000000.png&text=ad2" /></div>
-                <div><img width="100%" src="https://dummyimage.com/2000x400/01B468/000000.png&text=ad3" /></div>
+                <div class="slideimg slide1"></div>
+                <div class="slideimg slide2"></div>
+                <div class="slideimg slide3"></div>
             </div>
+
+            <!-- 公告內容 -->
+            <section class="contentSection bulletin">
+                <div class="contentFlexWrap bulletinWrapper">
+                    <div class="flexItem">
+                        <div class="title bkline" data-i18n="bulletin_title_1">News</div>
+                        <div>
+                            <!--contents-->
+                        </div>
+                    </div>
+                    
+                    <div class="flexItem">
+                        <div class="title bkline" data-i18n="bulletin_title_2">Activity</div>
+                        <div>
+                            <!--contents-->
+                        </div>
+                    </div>
+
+                    <div class="flexItem">
+                        <div class="title bkline" data-i18n="bulletin_title_3">Focus</div>
+                        <div>
+                            <!--contents-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 統計圖表 -->
+            <section class="contentSection grayBk">
+                <div class="contentFlexWrap statisticWrapper">
+                    <div class="flexItem">
+                        <div class="title bkline" data-i18n="statistic_title_1">Structure</div>
+                        <div>
+                            <!--股東結構contents-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Achievement -->
+             <section class="contentSection achievement">
+                <div class="title" >Achievement</div>
+                <!-- horizontal scroll-->
+                <div class="horizontalScrollInner">
+                    <div class="horizontalScrollBg draggableBK"></div>
+                    <div class="contentWrap achievementWrapper">
+                        <div class="horizontalScrollDraggable draggableBK" >
+                            <div>test data 1</div>
+                            <div>test data 2</div>
+                            <div>test data 3</div>
+                            <div>test data 4</div>
+                            <div>test data 5</div>
+                            <div>test data 6</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <footer class="footerWrapper">
