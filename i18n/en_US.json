@@ -3,5 +3,8 @@
   "bulletin_title_2": "Activity",
   "bulletin_title_3": "Focus",
   "statistic_title_1": "Structure",
-  "browser_recommendation": "Browser Recommendation"
+  "browser_recommendation": "Browser Recommendation",
+  "sign_in": "Sign in",
+  "account": "Account",
+  "password": "password"
 }

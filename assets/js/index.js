@@ -8,6 +8,9 @@ $(function() {
   // Pie Chart 初始化
   pieChartInit();
 
+  // Login Validate Init
+  loginValidateInit();
+
   $('.slideImageWrapper').slick({
     dots: false,
     infinite: true,
@@ -46,13 +49,15 @@ function i18nInit() {
   $.i18n().load({
     'en_US': './i18n/en_US.json',
     'zh_TW': './i18n/zh_TW.json',
-    'zh_CN': './i18n/zh_CN.json'
+    'vi_VN': './i18n/vi_VN.json'
   }).done(function (){
 
     // 語系初始化
     $('body').i18n();
   });
-  
+
+  $.extend($.validator.messages, VALIDATE_LANG[lang]);
+
   // click language option
   $('.langOption').on('click', function(e) {
     let locale = $(this).attr('value');
@@ -65,8 +70,11 @@ function i18nInit() {
       locale: locale
     });
     $('body').i18n();
+
+    $.extend($.validator.messages, VALIDATE_LANG[locale]);
   });
 }
+
 
 /**
  * goToTopInit
@@ -163,3 +171,37 @@ function initDragContent() {
   ).css({ 'width': length * singleWidth, 'left': distance });
 }
 
+/**
+ * loginValidateInit
+ * Login Validate Init
+ * 
+ */
+function loginValidateInit() {
+  var config = {
+    // lang: 'vi',
+    rules: {
+      account: "required",
+      password: "required",
+    },
+    submitHandler:function(form){
+      alert("提交事件!");   
+      form.submit();
+    }
+  };
+
+  var validator = $("#loginForm").validate(config);
+
+  $("#btn_signin").click(function() {
+    $('#account').val(null);
+    $('#password').val(null);
+    
+    validator.resetForm();
+    $(".error").removeClass("error");
+  });
+
+  // click language option
+  // $('.langOption').on('click', function(e) {
+  //   var locale = $(this).attr('value');
+  //   $.extend($.validator.messages, VALIDATE_LANG[locale]);
+  // });
+}

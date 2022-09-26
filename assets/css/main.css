@@ -86,8 +86,9 @@ header.headerWrapper .functionBox {
 .langOptionPannel {
     display:none;
     position: absolute;
+    width: 100px;
     top: calc(1.5em + 6px + 6px); /*langBtn Text Height + padding top and bottom*/
-    left: 0;
+    /* left: 0; */
     right: 0;
     text-align: center;
     z-index: 1000;
@@ -324,4 +325,11 @@ header.headerWrapper .functionBox {
     position: absolute;
     top: 8px;
     left: 8px;
+}
+
+input.error { 
+    border: 1px solid #FF0000; 
+}
+label.error {
+    color: #FF0000;
 }
