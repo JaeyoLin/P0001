@@ -7,18 +7,20 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./libs/fontawesome-6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./libs/slick-1.8.1/css/slick.css">
+    <link rel="stylesheet" href="./libs/fontawesome@6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./libs/slick@1.8.1/css/slick.css">
+    <link rel="stylesheet" href="./libs/bootstrap@5.2.1/bootstrap.min.css">
 
-    <script src="./libs/jquery-3.6.1/jquery-3.6.1.min.js"></script>
-    <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.min.js"></script>
-    <script src="./libs/jquery.i18n-1.0.7/jquery.i18n.messagestore.min.js"></script>
-    <script src="./libs/jquery-ui-1.13.2/jquery-ui.min.js"></script>
-    <script src="./libs/draggable-1.2.4/draggable_background.js"></script>
-    <script src="./libs/fontawesome-6.2.0/js/all.min.js"></script>
-    <script src="./libs/slick-1.8.1/js/slick.min.js"></script>
-    <script src="./libs/chart.js-3.9.1/chart.min.js"></script>
-    <script src="./libs/chartjs-plugin-datalabels-2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <script src="./libs/jquery@3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="./libs/jquery.i18n@1.0.7/jquery.i18n.min.js"></script>
+    <script src="./libs/jquery.i18n@1.0.7/jquery.i18n.messagestore.min.js"></script>
+    <script src="./libs/jquery-ui@1.13.2/jquery-ui.min.js"></script>
+    <script src="./libs/bootstrap@5.2.1/bootstrap.bundle.min.js"></script>
+    <script src="./libs/modernizr@2.7.1/modernizr-2.7.1.min.js"></script>
+    <script src="./libs/fontawesome@6.2.0/js/all.min.js"></script>
+    <script src="./libs/slick@1.8.1/js/slick.min.js"></script>
+    <script src="./libs/chart.js@3.9.1/chart.min.js"></script>
+    <script src="./libs/chartjs-plugin-datalabels@2.1.0/chartjs-plugin-datalabels.min.js"></script>
 
     <script src="./assets/js/config/common.js"></script>
     <script src="./assets/js/index.js"></script>
@@ -112,15 +114,19 @@
                 <div class="title" >Achievement</div>
                 <!-- horizontal scroll-->
                 <div class="horizontalScrollInner">
-                    <div class="horizontalScrollBg draggableBK"></div>
+                    <!-- horizontal scroll background-->
+                    <div id="horizontalScrollBg"></div>
+                    <!-- horizontal scroll text-->
                     <div class="contentWrap achievementWrapper">
-                        <div class="horizontalScrollDraggable draggableBK" >
-                            <div>test data 1</div>
-                            <div>test data 2</div>
-                            <div>test data 3</div>
-                            <div>test data 4</div>
-                            <div>test data 5</div>
-                            <div>test data 6</div>
+                        <div class="horizontalScrollDraggable">
+                            <ul id="achievementDragList" class="horizontalScrollDraggableList">
+                                <li class="dragItem">test data 1</li>
+                                <li class="dragItem">test data 2</li>
+                                <li class="dragItem">test data 3</li>
+                                <li class="dragItem">test data 4</li>
+                                <li class="dragItem">test data 5</li>
+                                <li class="dragItem">test data 6</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
