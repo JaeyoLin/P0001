@@ -20,8 +20,10 @@
     <script src="./libs/slick@1.8.1/js/slick.min.js"></script>
     <script src="./libs/chart.js@3.9.1/chart.min.js"></script>
     <script src="./libs/chartjs-plugin-datalabels@2.1.0/chartjs-plugin-datalabels.min.js"></script>
-
+    <script src="./libs/jquery-validation@1.19.5/jquery.validate.min.js"></script>
+    
     <script src="./assets/js/config/common.js"></script>
+    <script src="./assets/js/config/validate_lang.js"></script>
     <script src="./assets/js/index.js"></script>
 </head>
 <body>
@@ -32,14 +34,19 @@
             </div>
             <div class="functionBox">
                 <div class="btn loginBtn">
+                    <button id="btn_signin" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSignin">
+                        Sign in
+                    </button>
+                </div>
+                <div class="btn loginBtn">
                     <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="btn langBtn">
                     <i class="fa-solid fa-earth-americas"></i>
                     <div class="langOptionPannel">
-                        <div class="langOption active" value="en_US">EN</div>
-                        <div class="langOption" value="zh_TW">繁</div>
-                        <div class="langOption" value="zh_CN">簡</div>
+                        <div class="langOption active" value="en_US">English</div>
+                        <div class="langOption" value="zh_TW">繁體中文</div>
+                        <div class="langOption" value="vi_VN">Tiếng Việt</div>
                     </div>
                 </div>
             </div>
@@ -133,7 +140,7 @@
         </section>
 
         <footer class="footerWrapper">
-            <div>Copyright © Yuanta Financial Holding Co., Ltd. All Rights Reserved.</div>
+            <div>Copyright © XXXXX Co., Ltd. All Rights Reserved.</div>
             <div>
                 <span data-i18n="browser_recommendation"></span>
                 <span>: Microsoft Edge, Google Chrome, Firefox</span>
@@ -143,5 +150,30 @@
         <a href="#" class="back-to-top"><i class="fa-solid fa-chevron-up"></i></a>
     </div>
 
+    <!-- Login -->
+    <div class="modal fade py-4" tabindex="-1" role="dialog" id="modalSignin" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content rounded-4 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+              <h2 class="fw-bold mb-0" data-i18n="sign_in">Sign in</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+      
+            <div class="modal-body p-5 pt-0">
+              <form id="loginForm" class="" action="#">
+                <div class="mb-3">
+                    <label for="account" class="mb-1" data-i18n="account">Account</label>
+                    <input class="form-control rounded-3" id="account" name="account">
+                </div>
+                <div class="">
+                    <label for="password" class="mb-1" data-i18n="password">Password</label>
+                    <input class="form-control rounded-3" id="password" name="password" >
+                </div>
+                <button class="w-100 mt-5 mb-2 btn btn-lg rounded-3 btn-primary" type="submit" data-i18n="sign_in">Sign in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
 </body>
 </html>
