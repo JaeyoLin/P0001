@@ -191,9 +191,9 @@ header.headerWrapper .functionBox {
 .pieChartBox .description {
     flex: 1;
 }
-.pieChartBox .chart {
+/* .pieChartBox .chart {
     width: 400px;
-}
+} */
 @media only screen and (max-width: 600px) {
     .pieChartBox {
         flex-flow: column-reverse;
