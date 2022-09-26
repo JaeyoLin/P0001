@@ -198,8 +198,8 @@ function loginValidateInit() {
       password: "required",
     },
     submitHandler:function(form){
-      alert("提交事件!");   
-      form.submit();
+      // form.submit();
+      window.location.href = "./admin/lottery.html";
     }
   };
 
