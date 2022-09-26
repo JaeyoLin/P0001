@@ -20,8 +20,8 @@ $(function() {
   });
 
   
-  // draggable bk
-  $('div.draggableBK').backgroundDraggable();
+  // draggable bk/content
+  dragContentInit();
 });
 
 /**
@@ -121,4 +121,31 @@ function pieChartInit() {
       }
     }
   });
+}
+
+/**
+ * Draggable content initial
+ */
+function dragContentInit() {
+  var length = $("#achievementDragList").children('li').length;
+  var singleWidth = $("#achievementDragList").children('li').outerWidth();
+  var distance = length * singleWidth - $(".achievementWrapper").width();
+  $("#achievementDragList").parent().css({ 'width': length * singleWidth * 2 - 960, left: -distance });
+  $("#achievementDragList").draggable(
+    {
+      axis: "x",
+      containment: "parent",
+      start: function () {
+        $("#achievementDragList").addClass('grabbing');
+      },
+      drag: function () {
+        $("#achievementDragList").addClass('grabbing');
+        var offset = ($('#achievementDragList').css('left').slice(0, -2) - distance) / distance * 0.1;
+        $('#horizontalScrollBg').css('left', offset * 100 + '%');
+      },
+      stop: function () {
+        $("#achievementDragList").removeClass('grabbing');
+      }
+    }
+  ).css({ 'width': length * singleWidth, 'left': distance });
 }

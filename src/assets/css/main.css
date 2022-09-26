@@ -201,7 +201,7 @@ header.headerWrapper .functionBox {
 /*---[end] Content >> Statistic---*/
 
 /*---[start] Content >> Achievement---*/
-.horizontalScrollWrap {
+.horizontalScrollWrap, .contentWrap.achievementWrapper {
     position: relative;
 }
 .horizontalScrollInner {
@@ -210,13 +210,13 @@ header.headerWrapper .functionBox {
     position: relative;
     overflow: hidden;
 }
-.horizontalScrollBg {
+#horizontalScrollBg {
     padding-top: 80px;
     height: 350px;
     position: absolute;
     z-index: 0;
-    width: 120vw;
-    left: -5vw;
+    width: 120%;
+    left: 0;
     top: 0;
     background-size: cover;
     background-position: left center;
@@ -224,17 +224,58 @@ header.headerWrapper .functionBox {
 }
 .horizontalScrollDraggable {
     position: absolute;
-    z-index: 20;
+    left: 0;
+}
+.horizontalScrollDraggableList {
+    height: 350px;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    width: 120vw;
-    left: -20vw;
-    min-height: 100px;
     background: #ffffff57;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab
 }
-.contentWrap.achievementWrapper {
+.horizontalScrollDraggableList > .dragItem {
+    min-width: 190px;
+    padding: 10px 0;
+    border-left: 1px solid #bc935b;
     position: relative;
+    overflow: hidden;
+}
+.horizontalScrollDraggableList > .dragItem:nth-child(3n+1) {
+    top: 0;
+}
+.horizontalScrollDraggableList > .dragItem:nth-child(3n+2) {
+    top: -40px;
+}
+.horizontalScrollDraggableList > .dragItem:nth-child(3n) {
+    top: 30px;
+}
+.horizontalScrollInner:after {
+    content: '\f337';
+    width: 80px;
+    font-family: 'FontAwesome';
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40px;
+    z-index: 1;
+    border-radius: 40px 40px 0 0;
+    background-color: #9e9e9e29;
+    transform-origin: bottom;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 26px;
+    color: #bc935b;
 }
 /*---[end] Content >> Achievement---*/
 
