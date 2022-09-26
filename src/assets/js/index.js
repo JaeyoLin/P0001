@@ -56,7 +56,21 @@ function i18nInit() {
     $('body').i18n();
   });
 
+  // Validation Language
   $.extend($.validator.messages, VALIDATE_LANG[lang]);
+
+  // Language menu init
+  var langOptions = $('.langOption');
+  if (langOptions !== undefined && langOptions !== null) {
+    for (var i = 0; i < langOptions.length; i++) {
+      var $tmpObject = $(langOptions[i]);
+      $tmpObject.removeClass('active');
+      
+      if ($tmpObject.attr('value') === lang) {
+        $tmpObject.addClass('active');
+      }
+    }
+  }
 
   // click language option
   $('.langOption').on('click', function(e) {
@@ -198,10 +212,4 @@ function loginValidateInit() {
     validator.resetForm();
     $(".error").removeClass("error");
   });
-
-  // click language option
-  // $('.langOption').on('click', function(e) {
-  //   var locale = $(this).attr('value');
-  //   $.extend($.validator.messages, VALIDATE_LANG[locale]);
-  // });
 }
