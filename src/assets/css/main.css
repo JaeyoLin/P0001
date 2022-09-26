@@ -198,6 +198,9 @@ header.headerWrapper .functionBox {
     .pieChartBox {
         flex-flow: column-reverse;
     }
+    .pieChartBox .chart {
+        width: unset;
+    }
 }
 /*---[end] Content >> Statistic---*/
 
