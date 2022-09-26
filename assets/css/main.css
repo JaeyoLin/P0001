@@ -312,7 +312,7 @@ header.headerWrapper .functionBox {
     height: 40px;
     border-radius: 50%;
     right: 15px;
-    bottom: 15px;
+    bottom: 30px;
     background: #000000;
     color: #fff;
     transition: display 0.5s ease-in-out;
