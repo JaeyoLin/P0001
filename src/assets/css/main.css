@@ -277,6 +277,30 @@ header.headerWrapper .functionBox {
     font-size: 26px;
     color: #bc935b;
 }
+@media only screen and (max-width: 600px) {
+    .horizontalScrollInner, #horizontalScrollBg, .horizontalScrollDraggableList, .horizontalScrollDraggable, .horizontalScrollDraggableList > .dragItem {
+        height: auto !important;
+        position: static !important;
+    }
+    #horizontalScrollBg, .contentWrap.achievementWrapper {
+        width: 100% !important;
+    }
+    .horizontalScrollInner:after {
+        display: none !important;
+    }
+    .horizontalScrollInner {
+        display: flex;
+        flex-flow: column-reverse;
+        padding-top: 30px !important;
+    }
+    #achievementDragList {
+        flex-flow: column;
+    }
+    .horizontalScrollDraggableList > .dragItem {
+        margin: 20px !important;
+        width: 100%;
+    }
+}
 /*---[end] Content >> Achievement---*/
 
 /*---Go to Top---*/

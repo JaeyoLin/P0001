@@ -20,8 +20,9 @@ $(function() {
   });
 
   
-  // draggable bk/content
-  dragContentInit();
+  // draggable bk/content, when mobile size: did not support draggable
+  initDragContent();
+  window.addEventListener('resize', initDragContent);
 });
 
 /**
@@ -126,26 +127,39 @@ function pieChartInit() {
 /**
  * Draggable content initial
  */
-function dragContentInit() {
-  var length = $("#achievementDragList").children('li').length;
-  var singleWidth = $("#achievementDragList").children('li').outerWidth();
-  var distance = length * singleWidth - $(".achievementWrapper").width();
-  $("#achievementDragList").parent().css({ 'width': length * singleWidth * 2 - 960, left: -distance });
-  $("#achievementDragList").draggable(
+function initDragContent() {
+  var $drapList =  $("#achievementDragList");
+  var $wrap = $(".achievementWrapper");
+  $drapList.draggable({ disabled: false });
+  // check width
+  if (screen.width < 600 || window.innerWidth < 600) {
+    // did not support draggable
+     $drapList.parent().css({ 'width': '100%', left: 0 });
+     $drapList.css({ 'width': '100%', 'left': 0 });
+     $drapList.draggable({ disabled: true });
+    return;
+  }
+  // draggable
+  var length =  $drapList.children('li').length;
+  var singleWidth =  $drapList.children('li').outerWidth();
+  var distance = length * singleWidth - $wrap.width();
+   $drapList.parent().css({ 'width': length * singleWidth * 2 - 960, left: -distance });
+   $drapList.draggable(
     {
       axis: "x",
       containment: "parent",
       start: function () {
-        $("#achievementDragList").addClass('grabbing');
+         $drapList.addClass('grabbing');
       },
       drag: function () {
-        $("#achievementDragList").addClass('grabbing');
-        var offset = ($('#achievementDragList').css('left').slice(0, -2) - distance) / distance * 0.1;
+         $drapList.addClass('grabbing');
+        var offset = ($drapList.css('left').slice(0, -2) - distance) / distance * 0.1;
         $('#horizontalScrollBg').css('left', offset * 100 + '%');
       },
       stop: function () {
-        $("#achievementDragList").removeClass('grabbing');
+         $drapList.removeClass('grabbing');
       }
     }
   ).css({ 'width': length * singleWidth, 'left': distance });
 }
+
