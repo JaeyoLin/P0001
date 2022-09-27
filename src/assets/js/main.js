@@ -8,6 +8,9 @@ $(function() {
   // Pie Chart 初始化
   pieChartInit();
 
+  // Line Chart 初始化
+  lineChartInit();
+
   // Login Validate Init
   loginValidateInit();
 
@@ -147,6 +150,55 @@ function pieChartInit() {
 }
 
 /**
+ * LineChartInit
+ * Line Chart 初始化
+ * 
+ */
+ function lineChartInit() {
+  const ctx = document.getElementById('myLineChart');
+  const lineChart = new Chart(ctx, {
+    type: 'line',
+    data: LINE_CHART_DATA,
+    plugins: [{
+      beforeInit: function(chart, options) {
+        // before render char: 轉換數據為成長%數
+        const charConfigData = chart.config.data;
+        console.log(chart.config);
+        for (var i = 0; i < charConfigData.datasets.length; i++) {
+          const oriDataArr = charConfigData.datasets[i].oriData; // 原始數據
+          const baseVal = charConfigData.datasets[i].oriData[0];  // 第一筆為基底
+          for (var j = 0; j < charConfigData.labels.length; j++) {
+            const curDataVal = oriDataArr[j];
+            const growPercentage = (curDataVal - baseVal) / baseVal * 100;
+            charConfigData.datasets[i].data[j] = growPercentage; // rewrite Data
+          }
+        }
+      }
+    }],
+    options: {
+      interaction: {
+        mode: 'index'
+      },
+      plugins: {
+        responsive: true,
+        tooltip: {
+          callbacks: {
+              label: function(context) {
+                  // 客製 tooltip 顯示
+                  let label = context.dataset.label + ": ";
+                  const percentage = context.parsed.y;
+                  const realVal = context.dataset.oriData[context.dataIndex];
+                  label += percentage.toFixed(2) + "%" + " (" + realVal + ")";
+                  return label;
+              }
+          }
+        }
+      }
+    }
+  });
+}
+
+/**
  * Draggable content initial
  */
 function initDragContent() {
@@ -166,23 +218,21 @@ function initDragContent() {
   var singleWidth =  $drapList.children('li').outerWidth();
   var distance = length * singleWidth - $wrap.width();
    $drapList.parent().css({ 'width': length * singleWidth * 2 - 960, left: -distance });
-   $drapList.draggable(
-    {
+   $drapList.draggable({
       axis: "x",
       containment: "parent",
       start: function () {
-         $drapList.addClass('grabbing');
+        $drapList.addClass('grabbing');
       },
       drag: function () {
-         $drapList.addClass('grabbing');
+        $drapList.addClass('grabbing');
         var offset = ($drapList.css('left').slice(0, -2) - distance) / distance * 0.1;
         $('#horizontalScrollBg').css('left', offset * 100 + '%');
       },
       stop: function () {
          $drapList.removeClass('grabbing');
       }
-    }
-  ).css({ 'width': length * singleWidth, 'left': distance });
+    }).css({ 'width': length * singleWidth, 'left': distance });
 }
 
 /**
