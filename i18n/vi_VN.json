@@ -6,5 +6,13 @@
   "browser_recommendation": "瀏覽器建議",
   "sign_in": "登入",
   "account": "帳號",
-  "password": "密碼"
+  "password": "密碼",
+  "lottery_1": "539",
+  "lottery_2": "天天彩",
+  "today_price": "今日牌價：",
+  "submit": "送出",
+  "total_selected_balls": "已選擇: ",
+  "edit": "修改",
+  "history_seeting": "歷史設置",
+  "current_seeting": "今日設置"
 }

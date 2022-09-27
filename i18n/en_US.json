@@ -6,5 +6,13 @@
   "browser_recommendation": "Browser Recommendation",
   "sign_in": "Sign in",
   "account": "Account",
-  "password": "password"
+  "password": "password",
+  "lottery_1": "539",
+  "lottery_2": "天天彩",
+  "today_price": "Today Rate: ",
+  "submit": "Submit",
+  "total_selected_balls": "Total balls: ",
+  "edit": "Edit",
+  "history_seeting": "History Setting",
+  "current_seeting": "Current Seeting"
 }

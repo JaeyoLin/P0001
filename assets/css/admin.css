@@ -1,7 +1,13 @@
+body {
+    background-color: #F0F0F0;
+}
+.nav-item .active {
+    background-color: #5CADAD !important;
+}
 .lottery_container {
     width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 50px auto;
+    padding: 0px;
 }
 .nav-item {
     width: 150px;
@@ -12,8 +18,15 @@
 .tab-content {
     padding: 15px;
 }
+.functionBox > .btn {
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+.tab-content {
+    background-color: #FFFFFF;
+}
 .ball_container {
-    margin: 10px;
+    margin: 5px;
     height: 490px;
     /* border: 1px solid black; */
     background-color: #F5EDDC;
@@ -49,7 +62,7 @@
     overflow: hidden;
     cursor: pointer;
 }
-.ball:hover {
+.ball:hover, .ball.active {
     background: radial-gradient(circle at 50% 40%, #FFE153, #FFDC35 66%, #9b5050 100%);
 }
 .number {

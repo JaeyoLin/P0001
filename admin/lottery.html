@@ -13,22 +13,27 @@
     <script src="../libs/jquery.i18n@1.0.7/jquery.i18n.min.js"></script>
     <script src="../libs/jquery.i18n@1.0.7/jquery.i18n.messagestore.min.js"></script>
     <script src="../libs/bootstrap@5.2.1/bootstrap.bundle.min.js"></script>
+    <script src="../libs/fontawesome@6.2.0/js/all.min.js"></script>
+    <script src="../assets/js/config/common.js"></script>
     <script src="../assets/js/admin.js"></script>
 </head>
 <body>
     <div class="lottery_container">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <!-- Tabs -->
+        <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="lottery1-tab" data-bs-toggle="tab" data-bs-target="#lottery1" type="button" role="tab" aria-controls="home" aria-selected="true">539</button>
+                <button class="nav-link active" id="lottery1-tab" data-bs-toggle="tab" data-bs-target="#lottery1" type="button" role="tab" aria-controls="home" aria-selected="true"><span data-i18n="lottery_1">539</span></button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="lottery2-tab" data-bs-toggle="tab" data-bs-target="#lottery2" type="button" role="tab" aria-controls="lottery2" aria-selected="false">天天彩</button>
+                <button class="nav-link" id="lottery2-tab" data-bs-toggle="tab" data-bs-target="#lottery2" type="button" role="tab" aria-controls="lottery2" aria-selected="false"><span data-i18n="lottery_2">天天彩</span></button>
             </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
+        </ul>
+
+        <!-- Tabs Content -->
+        <div class="tab-content" id="pills-tabContent">
             <div class="tab-pane fade show active" id="lottery1" role="tabpanel" aria-labelledby="lottery1-tab">
                 <div class="d-flex flex-row">
-                    <div class="flex-grow-1 d-flex justify-content-start flex-column">
+                    <div class="flex-grow-1 d-flex justify-content-start flex-column ms-1">
                         <div class="fs-2">2022-10-05</div>
                         <div>
                             <div class="history_ball"><span class="history_number">1</span></div>
@@ -38,139 +43,183 @@
                             <div class="history_ball"><span class="history_number">5</span></div>
                         </div>
                     </div>
-                    <div class="flex-grow-1 d-flex justify-content-end">
-                        <div>今日牌價： 100</div>
+                    <div class="flex-grow-1 d-flex flex-column justify-content-end me-1">
+                        <div class="d-flex justify-content-end mb-2 fs-4">
+                            <span data-i18n="today_price">Today Rate: </span>100
+                            <button type="button" class="btn btn-info ms-5" data-i18n="edit" onclick="handleEdit();">Edit</button>
+                        </div>
+                        <div class="d-flex justify-content-end mb-2">
+                            <button type="button" class="btn btn-info" data-i18n="history_seeting" onclick="handleHistoryEdit();">History Setting</button>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-info" data-i18n="current_seeting" onclick="handleCurrentEdit();">Current Seeting</button>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex flex-row bd-highlight mt-4 mb-4">
-                    <div id="area_a" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
-                        <div class="ball"><span class="number">1</span></div>
-                        <div class="ball"><span class="number">2</span></div>
-                        <div class="ball"><span class="number">3</span></div>
-                        <div class="ball"><span class="number">4</span></div>
-                        <div class="ball"><span class="number">5</span></div>
-                        <div class="ball"><span class="number">6</span></div>
-                        <div class="ball"><span class="number">7</span></div>
-                        <div class="ball"><span class="number">8</span></div>
-                        <div class="ball"><span class="number">9</span></div>
-                        <div class="ball"><span class="number">10</span></div>
-                        <div class="ball"><span class="number">11</span></div>
-                        <div class="ball"><span class="number">12</span></div>
-                        <div class="ball"><span class="number">13</span></div>
-                        <div class="ball"><span class="number">14</span></div>
-                        <div class="ball"><span class="number">15</span></div>
-                        <div class="ball"><span class="number">16</span></div>
-                        <div class="ball"><span class="number">17</span></div>
-                        <div class="ball"><span class="number">18</span></div>
-                        <div class="ball"><span class="number">19</span></div>
-                        <div class="ball"><span class="number">20</span></div>
-                        <div class="ball"><span class="number">21</span></div>
-                        <div class="ball"><span class="number">22</span></div>
-                        <div class="ball"><span class="number">23</span></div>
-                        <div class="ball"><span class="number">24</span></div>
-                        <div class="ball"><span class="number">25</span></div>
-                        <div class="ball"><span class="number">26</span></div>
-                        <div class="ball"><span class="number">27</span></div>
-                        <div class="ball"><span class="number">28</span></div>
-                        <div class="ball"><span class="number">29</span></div>
-                        <div class="ball"><span class="number">30</span></div>
-                        <div class="ball"><span class="number">31</span></div>
-                        <div class="ball"><span class="number">32</span></div>
-                        <div class="ball"><span class="number">33</span></div>
-                        <div class="ball"><span class="number">34</span></div>
-                        <div class="ball"><span class="number">35</span></div>
-                        <div class="ball"><span class="number">36</span></div>
-                        <div class="ball"><span class="number">37</span></div>
-                        <div class="ball"><span class="number">38</span></div>
-                        <div class="ball"><span class="number">39</span></div>
+                <div class="d-flex flex-row bd-highlight mt-2 mb-4">
+                    <div class="flex-grow-1">
+                        <div class="functionBox d-flex justify-content-end">
+                            <div id="btn_clear_a" class="btn loginBtn">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                        <div id="area_a" class="p-2 bd-highlight d-flex flex-column flex-wrap ball_container align-content-center">
+                            <div class="ball"><span class="number">1</span></div>
+                            <div class="ball"><span class="number">2</span></div>
+                            <div class="ball"><span class="number">3</span></div>
+                            <div class="ball"><span class="number">4</span></div>
+                            <div class="ball"><span class="number">5</span></div>
+                            <div class="ball"><span class="number">6</span></div>
+                            <div class="ball"><span class="number">7</span></div>
+                            <div class="ball"><span class="number">8</span></div>
+                            <div class="ball"><span class="number">9</span></div>
+                            <div class="ball"><span class="number">10</span></div>
+                            <div class="ball"><span class="number">11</span></div>
+                            <div class="ball"><span class="number">12</span></div>
+                            <div class="ball"><span class="number">13</span></div>
+                            <div class="ball"><span class="number">14</span></div>
+                            <div class="ball"><span class="number">15</span></div>
+                            <div class="ball"><span class="number">16</span></div>
+                            <div class="ball"><span class="number">17</span></div>
+                            <div class="ball"><span class="number">18</span></div>
+                            <div class="ball"><span class="number">19</span></div>
+                            <div class="ball"><span class="number">20</span></div>
+                            <div class="ball"><span class="number">21</span></div>
+                            <div class="ball"><span class="number">22</span></div>
+                            <div class="ball"><span class="number">23</span></div>
+                            <div class="ball"><span class="number">24</span></div>
+                            <div class="ball"><span class="number">25</span></div>
+                            <div class="ball"><span class="number">26</span></div>
+                            <div class="ball"><span class="number">27</span></div>
+                            <div class="ball"><span class="number">28</span></div>
+                            <div class="ball"><span class="number">29</span></div>
+                            <div class="ball"><span class="number">30</span></div>
+                            <div class="ball"><span class="number">31</span></div>
+                            <div class="ball"><span class="number">32</span></div>
+                            <div class="ball"><span class="number">33</span></div>
+                            <div class="ball"><span class="number">34</span></div>
+                            <div class="ball"><span class="number">35</span></div>
+                            <div class="ball"><span class="number">36</span></div>
+                            <div class="ball"><span class="number">37</span></div>
+                            <div class="ball"><span class="number">38</span></div>
+                            <div class="ball"><span class="number">39</span></div>
+                        </div>
                     </div>
-                    <div id="area_b" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
-                        <div class="ball"><span class="number">1</span></div>
-                        <div class="ball"><span class="number">2</span></div>
-                        <div class="ball"><span class="number">3</span></div>
-                        <div class="ball"><span class="number">4</span></div>
-                        <div class="ball"><span class="number">5</span></div>
-                        <div class="ball"><span class="number">6</span></div>
-                        <div class="ball"><span class="number">7</span></div>
-                        <div class="ball"><span class="number">8</span></div>
-                        <div class="ball"><span class="number">9</span></div>
-                        <div class="ball"><span class="number">10</span></div>
-                        <div class="ball"><span class="number">11</span></div>
-                        <div class="ball"><span class="number">12</span></div>
-                        <div class="ball"><span class="number">13</span></div>
-                        <div class="ball"><span class="number">14</span></div>
-                        <div class="ball"><span class="number">15</span></div>
-                        <div class="ball"><span class="number">16</span></div>
-                        <div class="ball"><span class="number">17</span></div>
-                        <div class="ball"><span class="number">18</span></div>
-                        <div class="ball"><span class="number">19</span></div>
-                        <div class="ball"><span class="number">20</span></div>
-                        <div class="ball"><span class="number">21</span></div>
-                        <div class="ball"><span class="number">22</span></div>
-                        <div class="ball"><span class="number">23</span></div>
-                        <div class="ball"><span class="number">24</span></div>
-                        <div class="ball"><span class="number">25</span></div>
-                        <div class="ball"><span class="number">26</span></div>
-                        <div class="ball"><span class="number">27</span></div>
-                        <div class="ball"><span class="number">28</span></div>
-                        <div class="ball"><span class="number">29</span></div>
-                        <div class="ball"><span class="number">30</span></div>
-                        <div class="ball"><span class="number">31</span></div>
-                        <div class="ball"><span class="number">32</span></div>
-                        <div class="ball"><span class="number">33</span></div>
-                        <div class="ball"><span class="number">34</span></div>
-                        <div class="ball"><span class="number">35</span></div>
-                        <div class="ball"><span class="number">36</span></div>
-                        <div class="ball"><span class="number">37</span></div>
-                        <div class="ball"><span class="number">38</span></div>
-                        <div class="ball"><span class="number">39</span></div>
+                    <div class="flex-grow-1">
+                        <div class="functionBox d-flex justify-content-end">
+                            <div id="btn_clear_b" class="btn loginBtn">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                        <div id="area_b" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
+                            <div class="ball"><span class="number">1</span></div>
+                            <div class="ball"><span class="number">2</span></div>
+                            <div class="ball"><span class="number">3</span></div>
+                            <div class="ball"><span class="number">4</span></div>
+                            <div class="ball"><span class="number">5</span></div>
+                            <div class="ball"><span class="number">6</span></div>
+                            <div class="ball"><span class="number">7</span></div>
+                            <div class="ball"><span class="number">8</span></div>
+                            <div class="ball"><span class="number">9</span></div>
+                            <div class="ball"><span class="number">10</span></div>
+                            <div class="ball"><span class="number">11</span></div>
+                            <div class="ball"><span class="number">12</span></div>
+                            <div class="ball"><span class="number">13</span></div>
+                            <div class="ball"><span class="number">14</span></div>
+                            <div class="ball"><span class="number">15</span></div>
+                            <div class="ball"><span class="number">16</span></div>
+                            <div class="ball"><span class="number">17</span></div>
+                            <div class="ball"><span class="number">18</span></div>
+                            <div class="ball"><span class="number">19</span></div>
+                            <div class="ball"><span class="number">20</span></div>
+                            <div class="ball"><span class="number">21</span></div>
+                            <div class="ball"><span class="number">22</span></div>
+                            <div class="ball"><span class="number">23</span></div>
+                            <div class="ball"><span class="number">24</span></div>
+                            <div class="ball"><span class="number">25</span></div>
+                            <div class="ball"><span class="number">26</span></div>
+                            <div class="ball"><span class="number">27</span></div>
+                            <div class="ball"><span class="number">28</span></div>
+                            <div class="ball"><span class="number">29</span></div>
+                            <div class="ball"><span class="number">30</span></div>
+                            <div class="ball"><span class="number">31</span></div>
+                            <div class="ball"><span class="number">32</span></div>
+                            <div class="ball"><span class="number">33</span></div>
+                            <div class="ball"><span class="number">34</span></div>
+                            <div class="ball"><span class="number">35</span></div>
+                            <div class="ball"><span class="number">36</span></div>
+                            <div class="ball"><span class="number">37</span></div>
+                            <div class="ball"><span class="number">38</span></div>
+                            <div class="ball"><span class="number">39</span></div>
+                        </div>
                     </div>
-                    <div id="area_c" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
-                        <div class="ball"><span class="number">1</span></div>
-                        <div class="ball"><span class="number">2</span></div>
-                        <div class="ball"><span class="number">3</span></div>
-                        <div class="ball"><span class="number">4</span></div>
-                        <div class="ball"><span class="number">5</span></div>
-                        <div class="ball"><span class="number">6</span></div>
-                        <div class="ball"><span class="number">7</span></div>
-                        <div class="ball"><span class="number">8</span></div>
-                        <div class="ball"><span class="number">9</span></div>
-                        <div class="ball"><span class="number">10</span></div>
-                        <div class="ball"><span class="number">11</span></div>
-                        <div class="ball"><span class="number">12</span></div>
-                        <div class="ball"><span class="number">13</span></div>
-                        <div class="ball"><span class="number">14</span></div>
-                        <div class="ball"><span class="number">15</span></div>
-                        <div class="ball"><span class="number">16</span></div>
-                        <div class="ball"><span class="number">17</span></div>
-                        <div class="ball"><span class="number">18</span></div>
-                        <div class="ball"><span class="number">19</span></div>
-                        <div class="ball"><span class="number">20</span></div>
-                        <div class="ball"><span class="number">21</span></div>
-                        <div class="ball"><span class="number">22</span></div>
-                        <div class="ball"><span class="number">23</span></div>
-                        <div class="ball"><span class="number">24</span></div>
-                        <div class="ball"><span class="number">25</span></div>
-                        <div class="ball"><span class="number">26</span></div>
-                        <div class="ball"><span class="number">27</span></div>
-                        <div class="ball"><span class="number">28</span></div>
-                        <div class="ball"><span class="number">29</span></div>
-                        <div class="ball"><span class="number">30</span></div>
-                        <div class="ball"><span class="number">31</span></div>
-                        <div class="ball"><span class="number">32</span></div>
-                        <div class="ball"><span class="number">33</span></div>
-                        <div class="ball"><span class="number">34</span></div>
-                        <div class="ball"><span class="number">35</span></div>
-                        <div class="ball"><span class="number">36</span></div>
-                        <div class="ball"><span class="number">37</span></div>
-                        <div class="ball"><span class="number">38</span></div>
-                        <div class="ball"><span class="number">39</span></div>
+                    <div class="flex-grow-1">
+                        <div class="functionBox d-flex justify-content-end">
+                            <div id="btn_clear_c" class="btn loginBtn">
+                                <i class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                        <div id="area_c" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
+                            <div class="ball"><span class="number">1</span></div>
+                            <div class="ball"><span class="number">2</span></div>
+                            <div class="ball"><span class="number">3</span></div>
+                            <div class="ball"><span class="number">4</span></div>
+                            <div class="ball"><span class="number">5</span></div>
+                            <div class="ball"><span class="number">6</span></div>
+                            <div class="ball"><span class="number">7</span></div>
+                            <div class="ball"><span class="number">8</span></div>
+                            <div class="ball"><span class="number">9</span></div>
+                            <div class="ball"><span class="number">10</span></div>
+                            <div class="ball"><span class="number">11</span></div>
+                            <div class="ball"><span class="number">12</span></div>
+                            <div class="ball"><span class="number">13</span></div>
+                            <div class="ball"><span class="number">14</span></div>
+                            <div class="ball"><span class="number">15</span></div>
+                            <div class="ball"><span class="number">16</span></div>
+                            <div class="ball"><span class="number">17</span></div>
+                            <div class="ball"><span class="number">18</span></div>
+                            <div class="ball"><span class="number">19</span></div>
+                            <div class="ball"><span class="number">20</span></div>
+                            <div class="ball"><span class="number">21</span></div>
+                            <div class="ball"><span class="number">22</span></div>
+                            <div class="ball"><span class="number">23</span></div>
+                            <div class="ball"><span class="number">24</span></div>
+                            <div class="ball"><span class="number">25</span></div>
+                            <div class="ball"><span class="number">26</span></div>
+                            <div class="ball"><span class="number">27</span></div>
+                            <div class="ball"><span class="number">28</span></div>
+                            <div class="ball"><span class="number">29</span></div>
+                            <div class="ball"><span class="number">30</span></div>
+                            <div class="ball"><span class="number">31</span></div>
+                            <div class="ball"><span class="number">32</span></div>
+                            <div class="ball"><span class="number">33</span></div>
+                            <div class="ball"><span class="number">34</span></div>
+                            <div class="ball"><span class="number">35</span></div>
+                            <div class="ball"><span class="number">36</span></div>
+                            <div class="ball"><span class="number">37</span></div>
+                            <div class="ball"><span class="number">38</span></div>
+                            <div class="ball"><span class="number">39</span></div>
+                        </div>
                     </div>
                 </div>
-                <div>BB</div>
+                <div class="d-flex flex-row">
+                    <div class="flex-grow-1 d-flex justify-content-start ms-1">
+                        <div class="align-self-middle">
+                            <div class="fs-3">10 X 10 X 10 = 999</div>
+                            <div class="fs-3">總金額 = 1000</div>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 d-flex justify-content-end me-1">
+                        <div class="align-self-end">
+                            <span data-i18n="total_selected_balls" class="fs-4 align-middle"></span>
+                            <span id="span_count" class="fs-4 align-middle">Total balls: </span>
+                            <button id="btn_submit" type="button" class="btn btn-primary ms-4" onclick="handleSubmit();" disabled><span data-i18n="submit">Submit</span></button>
+                        </div>                    
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="lottery2" role="tabpanel" aria-labelledby="lottery2-tab">天天彩</div>
-          </div>
+        </div>
     </div>
 </body>
 </html>
