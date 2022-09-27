@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../libs/bootstrap@5.2.1/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../libs/bootstrap@5.2.1/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../assets/css/admin.css">
 
-    <script src="../libs/jquery@3.6.1/jquery-3.6.1.min.js"></script>
+    <script src="../libs/jquery@1.11.3/jquery-1.11.3.min.js"></script>
+    <!-- <script src="../libs/jquery@3.6.1/jquery-3.6.1.min.js"></script> -->
     <script src="../libs/jquery.i18n@1.0.7/jquery.i18n.min.js"></script>
     <script src="../libs/jquery.i18n@1.0.7/jquery.i18n.messagestore.min.js"></script>
-    <script src="../libs/bootstrap@5.2.1/bootstrap.bundle.min.js"></script>
+    <script src="../libs/bootstrap/bootstrap.min.js"></script>
+    <!-- <script src="../libs/bootstrap@5.2.1/bootstrap.bundle.min.js"></script> -->
     <script src="../libs/fontawesome@6.2.0/js/all.min.js"></script>
     <script src="../assets/js/config/common.js"></script>
     <script src="../assets/js/admin.js"></script>
@@ -20,21 +23,17 @@
 <body>
     <div class="lottery_container">
         <!-- Tabs -->
-        <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="lottery1-tab" data-bs-toggle="tab" data-bs-target="#lottery1" type="button" role="tab" aria-controls="home" aria-selected="true"><span data-i18n="lottery_1">539</span></button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="lottery2-tab" data-bs-toggle="tab" data-bs-target="#lottery2" type="button" role="tab" aria-controls="lottery2" aria-selected="false"><span data-i18n="lottery_2">天天彩</span></button>
-            </li>
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="tab" href="#lottery1"><span data-i18n="lottery_1">539</span></a></li>
+            <li><a data-toggle="tab" href="#lottery2"><span data-i18n="lottery_2">天天彩</span></a></li>
         </ul>
-
+          
         <!-- Tabs Content -->
-        <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="lottery1" role="tabpanel" aria-labelledby="lottery1-tab">
+        <div class="tab-content">
+            <div id="lottery1" class="tab-pane fade in active">
                 <div class="d-flex flex-row">
-                    <div class="flex-grow-1 d-flex justify-content-start flex-column ms-1">
-                        <div class="fs-2">2022-10-05</div>
+                    <div class="flex-grow-1 d-flex justify-content-start flex-column">
+                        <div style="font-size: 24px; margin-left: 5px;">2022-10-05</div>
                         <div>
                             <div class="history_ball"><span class="history_number">1</span></div>
                             <div class="history_ball"><span class="history_number">2</span></div>
@@ -43,10 +42,10 @@
                             <div class="history_ball"><span class="history_number">5</span></div>
                         </div>
                     </div>
-                    <div class="flex-grow-1 d-flex flex-column justify-content-end me-1">
-                        <div class="d-flex justify-content-end mb-2 fs-4">
+                    <div class="flex-grow-1 d-flex flex-column justify-content-end">
+                        <div class="d-flex justify-content-end mb-2" style="font-size: 24px">
                             <span data-i18n="today_price">Today Rate: </span>100
-                            <button type="button" class="btn btn-info ms-5" data-i18n="edit" onclick="handleEdit();">Edit</button>
+                            <button type="button" style="margin-left: 10px;" class="btn btn-info" data-i18n="edit" onclick="handleEdit();">Edit</button>
                         </div>
                         <div class="d-flex justify-content-end mb-2">
                             <button type="button" class="btn btn-info" data-i18n="history_seeting" onclick="handleHistoryEdit();">History Setting</button>
@@ -56,14 +55,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex flex-row bd-highlight mt-2 mb-4">
+                <div class="d-flex flex-row">
                     <div class="flex-grow-1">
                         <div class="functionBox d-flex justify-content-end">
                             <div id="btn_clear_a" class="btn loginBtn">
                                 <i class="fa-solid fa-trash"></i>
                             </div>
                         </div>
-                        <div id="area_a" class="p-2 bd-highlight d-flex flex-column flex-wrap ball_container align-content-center">
+                        <div id="area_a" class="p-2 d-flex flex-column flex-wrap ball_container align-content-center">
                             <div class="ball"><span class="number">1</span></div>
                             <div class="ball"><span class="number">2</span></div>
                             <div class="ball"><span class="number">3</span></div>
@@ -111,7 +110,7 @@
                                 <i class="fa-solid fa-trash"></i>
                             </div>
                         </div>
-                        <div id="area_b" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
+                        <div id="area_b" class="p-2 flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
                             <div class="ball"><span class="number">1</span></div>
                             <div class="ball"><span class="number">2</span></div>
                             <div class="ball"><span class="number">3</span></div>
@@ -159,7 +158,7 @@
                                 <i class="fa-solid fa-trash"></i>
                             </div>
                         </div>
-                        <div id="area_c" class="p-2 bd-highlight flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
+                        <div id="area_c" class="p-2 flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
                             <div class="ball"><span class="number">1</span></div>
                             <div class="ball"><span class="number">2</span></div>
                             <div class="ball"><span class="number">3</span></div>
@@ -205,20 +204,22 @@
                 <div class="d-flex flex-row">
                     <div class="flex-grow-1 d-flex justify-content-start ms-1">
                         <div class="align-self-middle">
-                            <div class="fs-3">10 X 10 X 10 = 999</div>
-                            <div class="fs-3">總金額 = 1000</div>
+                            <div style="font-size: 24px">10 X 10 X 10 = 999</div>
+                            <div style="font-size: 24px">總金額 = 1000</div>
                         </div>
                     </div>
                     <div class="flex-grow-1 d-flex justify-content-end me-1">
                         <div class="align-self-end">
                             <span data-i18n="total_selected_balls" class="fs-4 align-middle"></span>
-                            <span id="span_count" class="fs-4 align-middle">Total balls: </span>
+                            <span id="span_count" class="align-middle" style="font-size: 24px">Total balls: </span>
                             <button id="btn_submit" type="button" class="btn btn-primary ms-4" onclick="handleSubmit();" disabled><span data-i18n="submit">Submit</span></button>
                         </div>                    
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="lottery2" role="tabpanel" aria-labelledby="lottery2-tab">天天彩</div>
+            <div id="lottery2" class="tab-pane fade">
+                天天彩
+            </div>
         </div>
     </div>
 </body>
