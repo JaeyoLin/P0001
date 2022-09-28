@@ -6,16 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="../libs/bootstrap@5.2.1/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../libs/bootstrap@3.3.6/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
 
     <script src="../libs/jquery@1.11.3/jquery-1.11.3.min.js"></script>
-    <!-- <script src="../libs/jquery@3.6.1/jquery-3.6.1.min.js"></script> -->
-    <script src="../libs/jquery.i18n@1.0.7/jquery.i18n.min.js"></script>
-    <script src="../libs/jquery.i18n@1.0.7/jquery.i18n.messagestore.min.js"></script>
-    <script src="../libs/bootstrap/bootstrap.min.js"></script>
-    <!-- <script src="../libs/bootstrap@5.2.1/bootstrap.bundle.min.js"></script> -->
+    <script src="../libs/bootstrap@3.3.6/bootstrap.min.js"></script>
     <script src="../libs/fontawesome@6.2.0/js/all.min.js"></script>
     <script src="../assets/js/config/common.js"></script>
     <script src="../assets/js/admin.js"></script>
@@ -24,8 +19,8 @@
     <div class="lottery_container">
         <!-- Tabs -->
         <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="tab" href="#lottery1"><span data-i18n="lottery_1">539</span></a></li>
-            <li><a data-toggle="tab" href="#lottery2"><span data-i18n="lottery_2">天天彩</span></a></li>
+            <li class="active"><a class="tab-menu" data-toggle="tab" href="#lottery1">539</a></li>
+            <li><a class="tab-menu" data-toggle="tab" href="#lottery2">天天彩</a></li>
         </ul>
           
         <!-- Tabs Content -->
@@ -33,7 +28,7 @@
             <div id="lottery1" class="tab-pane fade in active">
                 <div class="d-flex flex-row">
                     <div class="flex-grow-1 d-flex justify-content-start flex-column">
-                        <div style="font-size: 24px; margin-left: 5px;">2022-10-05</div>
+                        <div class="ml-1 font-24">2022-10-05</div>
                         <div>
                             <div class="history_ball"><span class="history_number">1</span></div>
                             <div class="history_ball"><span class="history_number">2</span></div>
@@ -43,15 +38,15 @@
                         </div>
                     </div>
                     <div class="flex-grow-1 d-flex flex-column justify-content-end">
-                        <div class="d-flex justify-content-end mb-2" style="font-size: 24px">
-                            <span data-i18n="today_price">Today Rate: </span>100
-                            <button type="button" style="margin-left: 10px;" class="btn btn-info" data-i18n="edit" onclick="handleEdit();">Edit</button>
+                        <div class="d-flex justify-content-end mb-2 font-24">
+                            <span>今日牌價: 100</span>
+                            <button type="button" class="btn btn-info ml-2" onclick="handleEdit();">編輯</button>
                         </div>
                         <div class="d-flex justify-content-end mb-2">
-                            <button type="button" class="btn btn-info" data-i18n="history_seeting" onclick="handleHistoryEdit();">History Setting</button>
+                            <button type="button" class="btn btn-info" onclick="handleHistoryEdit();">歷史設置</button>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <button type="button" class="btn btn-info" data-i18n="current_seeting" onclick="handleCurrentEdit();">Current Seeting</button>
+                            <button type="button" class="btn btn-info" onclick="handleCurrentEdit();">今日設置</button>
                         </div>
                     </div>
                 </div>
@@ -201,18 +196,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex flex-row">
-                    <div class="flex-grow-1 d-flex justify-content-start ms-1">
+                <div class="d-flex flex-row mt-2">
+                    <div class="flex-grow-1 d-flex justify-content-start">
                         <div class="align-self-middle">
-                            <div style="font-size: 24px">10 X 10 X 10 = 999</div>
-                            <div style="font-size: 24px">總金額 = 1000</div>
+                            <div class="font-24">10 X 10 X 10 = 999</div>
+                            <div class="font-24">總金額 = 1000</div>
                         </div>
                     </div>
-                    <div class="flex-grow-1 d-flex justify-content-end me-1">
-                        <div class="align-self-end">
-                            <span data-i18n="total_selected_balls" class="fs-4 align-middle"></span>
-                            <span id="span_count" class="align-middle" style="font-size: 24px">Total balls: </span>
-                            <button id="btn_submit" type="button" class="btn btn-primary ms-4" onclick="handleSubmit();" disabled><span data-i18n="submit">Submit</span></button>
+                    <div class="flex-grow-1 d-flex justify-content-end">
+                        <div class="align-self-end d-flex">
+                            <div>
+                                <span class="font-24">已選: </span>
+                                <span id="span_count" class="font-24"></span>
+                                <span class="font-24">個</span>
+                            </div>
+                            <button id="btn_submit" type="button" class="btn btn-primary w-100 h-35 ml-2" onclick="handleSubmit();" disabled>送出</button>
                         </div>                    
                     </div>
                 </div>

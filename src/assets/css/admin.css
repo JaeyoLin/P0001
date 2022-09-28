@@ -6,9 +6,16 @@ body {
     margin-bottom: 10px;
     border-radius: 5px;
     text-align: center;
+    background-color: unset;
 }
-.nav-pills li.active {
-    background-color: #5CADAD !important;
+.nav-pills > li > a.tab-menu {
+    color: #5CADAD;
+    border: none;
+}
+.nav-pills > li.active > a.tab-menu {
+    background-color: #5CADAD;
+    color: white;
+    border: none;
 }
 .lottery_container {
     width: 900px;
@@ -96,11 +103,33 @@ body {
 .flex-wrap {
     flex-wrap: wrap;
 }
-
 .p-2 {
     padding: 10px;
 }
-
+.mt-2 {
+    margin-bottom: 10px;
+}
 .mb-2 {
     margin-bottom: 10px;
+}
+.ml-1 {
+    margin-left: 5px;
+}
+.ml-2 {
+    margin-left: 10px;
+}
+.font-24 {
+    font-size: 24px;
+}
+.align-middle {
+    vertical-align: middle;
+}
+.align-self-end {
+    align-self: end;
+}
+.w-100 {
+    width: 100px;
+}
+.h-35 {
+    height: 35px;
 }
