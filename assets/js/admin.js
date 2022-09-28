@@ -10,9 +10,6 @@ var AREA_TYPE = {
 };
 
 $(function() {
-  // i18n 初始化
-  i18nInit();
-
   clearSelectBalls(AREA_TYPE.ALL);
   setSelectedBallStatus();
   
@@ -157,6 +154,10 @@ function countSelectedBalls() {
   return area_a_539.length + area_b_539.length + area_c_539.length;
 }
 
+/**
+ * setSelectedBallStatus
+ * 
+ */
 function setSelectedBallStatus() {
   var tmpCount = countSelectedBalls();
   $('#span_count').text(tmpCount);
@@ -177,35 +178,6 @@ function handleSubmit() {
   console.log('A Area: ', area_a_539);
   console.log('B Area: ', area_b_539);
   console.log('C Area: ', area_c_539);
-}
-
-/**
- * i18nInit
- * i18n 初始化
- * 
- */
- function i18nInit() {
-  var lang = localStorage.getItem(I18N_LANG_KEY);
-  
-  // 預設英文
-  if (lang === undefined || lang === null) {
-    lang = 'en_US';
-  }
-
-  $.i18n({
-    locale: lang,
-  });
-
-  // 讀取語系檔
-  $.i18n().load({
-    'en_US': '../i18n/en_US.json',
-    'zh_TW': '../i18n/zh_TW.json',
-    'vi_VN': '../i18n/vi_VN.json'
-  }).done(function (){
-
-    // 語系初始化
-    $('body').i18n();
-  });
 }
 
 /**
