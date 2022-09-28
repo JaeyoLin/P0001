@@ -190,6 +190,27 @@ header.headerWrapper .functionBox {
 }
 .pieChartBox .description {
     flex: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+.description .baseDate {
+    font-size: 14px;
+    color: #b6b6b6;
+}
+.description .totalStock {
+    margin-right: 20px;
+    font-weight: bold;
+}
+.description .totalStockNumber {
+    color: #bc935b;
+    font-size: 32px;
+}
+.description .stockData {
+    margin-right: 50px;
+}
+.stockHolderTable td {
+    border-bottom-width: 0px !important;
+    padding: 10px;
 }
 .pieChartBox .chart {
     width: 400px;
@@ -335,4 +356,13 @@ input.error {
 }
 label.error {
     color: #FF0000;
+}
+.iLegend {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.tar {
+    text-align: right;
 }

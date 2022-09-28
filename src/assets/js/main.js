@@ -121,32 +121,40 @@ function goToTopInit() {
  * 
  */
 function pieChartInit() {
-  const ctx = document.getElementById('myChart');
-  const data = {
-    datasets: [
-      {
-        data: [10, 20, 15, 5, 50],
-        backgroundColor: [ 'rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', ],
-        radius: '80%',
-      },
-    ],
-  };
-  const myChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: data,
-    plugins: [ChartDataLabels],
-    options: {
-      plugins: {
-        datalabels: {
-          formatter: (value) => {
-            return value + '%';
-          },
-          anchor: 'end',
-          align: 'end',
+  openLoader('pieChart_loader');
+
+  // 假裝呼叫 API 延遲，到時候依照 API 再改成 AJAX
+  setTimeout(() => {
+    const ctx = document.getElementById('pieChart');
+    const data = {
+      datasets: [
+        {
+          data: [10, 20, 15, 5, 50],
+          backgroundColor: [ 'rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', ],
+          radius: '80%',
+        },
+      ],
+    };
+    const myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      plugins: [ChartDataLabels],
+      options: {
+        plugins: {
+          datalabels: {
+            formatter: (value) => {
+              return value + '%';
+            },
+            anchor: 'end',
+            align: 'end',
+          }
         }
       }
-    }
-  });
+    });
+
+    closeLoader('pieChart_loader');
+    $('#pieChart_container').show();
+  }, 2000);
 }
 
 /**
@@ -262,4 +270,25 @@ function loginValidateInit() {
     validator.resetForm();
     $(".error").removeClass("error");
   });
+}
+
+/**
+ * openLoader
+ * 開啟 loader
+ * 
+ * @param {string} elementId HTML element id
+ */
+function openLoader(elementId) {
+  $('#' + elementId).show();
+  $('#' + elementId).scheletrone();
+}
+
+/**
+ * closeLoader
+ * 關閉 loader
+ * 
+ * @param {string} elementId HTML element id
+ */
+function closeLoader(elementId) {
+  $('#' + elementId).hide();
 }
