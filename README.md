@@ -7,6 +7,9 @@
 ## Folder Structure
 
 ```
+管理者相關頁面不實作 i18n。
+使用舊版 jQuery@1.11.3、Bootstrap@3.3.6
+
 .
 ├── src                                      # 靜態頁面
 │    ├── admin                               # 管理者頁面
