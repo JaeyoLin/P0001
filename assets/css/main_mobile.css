@@ -1,0 +1,54 @@
+@media only screen and (max-width: 600px) {
+    .pieChartBox {
+        flex-flow: column-reverse;
+    }
+    .pieChartBox .chart {
+        width: unset;
+    }
+    #pieChart_loader .description {
+        padding-left: 0px;
+    }
+    .slideImageWrapper div.slideimg {
+        height: 50vw;
+        min-height: 180px;
+        max-height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    header.headerWrapper .functionBox {
+        flex-flow: column;
+        align-items: end;
+    }
+    .contentFlexWrap {
+        flex-flow: column;
+    }
+    .flexItem {
+        margin-bottom: 30px;
+    }
+    .pieChartBox .description {
+        margin-top: 30px;
+    }
+    .horizontalScrollInner, #horizontalScrollBg, .horizontalScrollDraggableList, .horizontalScrollDraggable, .horizontalScrollDraggableList > .dragItem {
+        height: auto !important;
+        position: static !important;
+    }
+    #horizontalScrollBg, .contentWrap.achievementWrapper {
+        width: 100% !important;
+    }
+    .horizontalScrollInner:after {
+        display: none !important;
+    }
+    .horizontalScrollInner {
+        display: flex;
+        flex-flow: column-reverse;
+        padding-top: 30px !important;
+    }
+    #achievementDragList {
+        flex-flow: column;
+    }
+    .horizontalScrollDraggableList > .dragItem {
+        margin: 20px !important;
+        width: 100%;
+    }
+}

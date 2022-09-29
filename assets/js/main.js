@@ -292,3 +292,11 @@ function openLoader(elementId) {
 function closeLoader(elementId) {
   $('#' + elementId).hide();
 }
+
+/**
+ * 判斷是否支援 touch
+ * @returns 
+ */
+function isTouchSupported() {
+  return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+}
