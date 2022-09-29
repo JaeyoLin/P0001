@@ -134,9 +134,9 @@ header.headerWrapper .functionBox {
         background-size: cover;
         background-position: center center;
     }
-    .functionBox > .langBtn > span {
-        font-size: 16px;
-        padding: 10px;
+    header.headerWrapper .functionBox {
+        flex-flow: column;
+        align-items: end;
     }
 }
 /*---[end] Content >> Slide Image---*/
@@ -181,6 +181,9 @@ header.headerWrapper .functionBox {
     .flexItem {
         margin-bottom: 30px;
     }
+    .pieChartBox .description {
+        margin-top: 30px;
+    }
 }
 /*---[end] Content >> Bulletin---*/
 
@@ -189,6 +192,9 @@ header.headerWrapper .functionBox {
     display: flex; 
     flex-flow: row;
     width: 100%;
+}
+#pieChart_loader .description {
+    padding-left: 50px;
 }
 .pieChartBox .description {
     flex: 1;
@@ -208,7 +214,7 @@ header.headerWrapper .functionBox {
     font-size: 32px;
 }
 .description .stockData {
-    margin-right: 50px;
+    margin-right: 20px;
 }
 .stockHolderTable td {
     border-bottom-width: 0px !important;
@@ -223,6 +229,9 @@ header.headerWrapper .functionBox {
     }
     .pieChartBox .chart {
         width: unset;
+    }
+    #pieChart_loader .description {
+        padding-left: 0px;
     }
 }
 /*---[end] Content >> Statistic---*/
