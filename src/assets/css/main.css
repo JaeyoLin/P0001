@@ -108,7 +108,7 @@ header.headerWrapper {
     box-shadow: unset !important;
 }
 .navbar-nav > li {
-    width: 75px;
+    min-width: 75px;
     text-align: center;
 }
 .navbar-nav > li:hover {
