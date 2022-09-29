@@ -97,66 +97,23 @@ header.headerWrapper {
 }
 /*---[end] Main Layout---*/
 
-/*---[start] Header Block---*/
-header.headerWrapper .companyIcon {
-    line-height: 0;
-}
-header.headerWrapper .companyIcon img {
+.companyIcon img {
     max-width: 250px;
     width: 100%;
 }
-header.headerWrapper .functionBox {
-    flex: 1 1 auto;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: flex-end;
+.navbar-toggler {
+    border: 0px !important;
 }
-.functionBox > .btn > svg {
-    height: 1.5em;
+.navbar-toggler:focus {
+    box-shadow: unset !important;
 }
-.functionBox > .btn > span {
-    display: none;
-    transition-delay: 0s;
-    transition-duration: 0.4s;
+.navbar-nav > li {
+    width: 75px;
+    text-align: center;
 }
-.functionBox > .btn.langBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.functionBox > .langBtn > span {
-    cursor: pointer;
-    font-size: 18px;
-    padding: 20px;
-}
-.functionBox > div.menuHover:hover {
+.navbar-nav > li:hover {
     border-bottom: 3px solid #025da3;
 }
-.langOptionPannel {
-    display:none;
-    position: absolute;
-    width: 100px;
-    top: calc(2.6em + 6px + 6px); /*langBtn Text Height + padding top and bottom*/
-    /* left: 0; */
-    right: 0;
-    text-align: center;
-    z-index: 1000;
-}
-.btn.langBtn:hover, .btn.langBtn:active, .langOptionPannel {
-    background: #0067b3;
-    color: white;
-}
-.btn.langBtn:hover .langOptionPannel, .btn.langBtn:active .langOptionPannel {
-    display: block;
-}
-.langOption {
-    padding: 3px 0px;
-}
-.langOption:hover, .langOption.active {
-    background: #0b7fde
-}
-/*---[end]  Header Block---*/
 
 /*---[start] Content >> Slide Image---*/
 .slideImageWrapper div.slideimg {
@@ -189,6 +146,13 @@ header.headerWrapper .functionBox {
     header.headerWrapper .functionBox {
         flex-flow: column;
         align-items: end;
+    }
+    .navbar-nav > li {
+        width: unset;
+        text-align: unset;
+    }
+    .navbar-nav > li:hover {
+        border-bottom: unset;
     }
 }
 /*---[end] Content >> Slide Image---*/
