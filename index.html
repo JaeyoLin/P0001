@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./libs/fontawesome@6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./libs/slick@1.8.1/css/slick.css">
     <link rel="stylesheet" href="./libs/bootstrap@5.2.1/bootstrap.min.css">
     <link rel="stylesheet" href="./libs/jquery.skeleton.loader@1.2.0/jquery.skeleton.css">
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main_mobile.css" />
 
     <script src="./libs/jquery@3.6.1/jquery-3.6.1.min.js"></script>
     <script src="./libs/jquery.i18n@1.0.7/jquery.i18n.min.js"></script>
@@ -33,7 +34,9 @@
         <nav class="navbar navbar-expand-sm navbar-light bg-light">
             <div class="container-fluid">
                 <div class="companyIcon">
-                    <img src="https://dummyimage.com/500x160/F0F0F0/000000.png&text=company+logo" />
+                    <a href="./index.html">
+                        <img src="https://dummyimage.com/500x160/F0F0F0/000000.png&text=company+logo" />
+                    </a>
                 </div>
 
                 <button class="navbar-toggler btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
@@ -43,10 +46,10 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalSignin"><span data-i18n="sign_in">Sign in</span></a>
+                            <a id="btn_signin" href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalSignin"><span data-i18n="sign_in">Sign in</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><span data-i18n="sign_up">Sign up</span></a>
+                            <a href="./register.html" class="nav-link"><span data-i18n="sign_up">Sign up</span></a>
                         </li>
                         
                         <li class="nav-item dropdown">

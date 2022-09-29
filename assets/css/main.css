@@ -108,7 +108,7 @@ header.headerWrapper {
     box-shadow: unset !important;
 }
 .navbar-nav > li {
-    width: 75px;
+    min-width: 75px;
     text-align: center;
 }
 .navbar-nav > li:hover {
@@ -131,29 +131,6 @@ header.headerWrapper {
 }
 .slideImageWrapper div.slide3 {
     background-image: url("https://dummyimage.com/2000x400/28251c/ffffff.png&text=ad3");
-}
-
-/*mobile size*/
-@media only screen and (max-width: 600px) {
-    .slideImageWrapper div.slideimg {
-        height: 50vw;
-        min-height: 180px;
-        max-height: 400px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-    header.headerWrapper .functionBox {
-        flex-flow: column;
-        align-items: end;
-    }
-    .navbar-nav > li {
-        width: unset;
-        text-align: unset;
-    }
-    .navbar-nav > li:hover {
-        border-bottom: unset;
-    }
 }
 /*---[end] Content >> Slide Image---*/
 
@@ -219,17 +196,6 @@ header.headerWrapper {
     word-break: break-word;
     text-align: justify;
 }
-@media only screen and (max-width: 600px) {
-    .contentFlexWrap {
-        flex-flow: column;
-    }
-    .flexItem {
-        margin-bottom: 30px;
-    }
-    .pieChartBox .description {
-        margin-top: 30px;
-    }
-}
 /*---[end] Content >> Bulletin---*/
 
 /*---[start] Content >> Statistic---*/
@@ -263,17 +229,6 @@ header.headerWrapper {
 }
 .pieChartBox .chart {
     width: 400px;
-}
-@media only screen and (max-width: 600px) {
-    .pieChartBox {
-        flex-flow: column-reverse;
-    }
-    .pieChartBox .chart {
-        width: unset;
-    }
-    #pieChart_loader .description {
-        padding-left: 0px;
-    }
 }
 /*---[end] Content >> Statistic---*/
 
@@ -370,33 +325,6 @@ li.dragItem.hoverShowBtn:hover .hoverShowContent {
     font-size: 26px;
     color: #bc935b;
 }
-@media only screen and (max-width: 600px) {
-    .horizontalScrollInner, #horizontalScrollBg, .horizontalScrollDraggableList, .horizontalScrollDraggable, .horizontalScrollDraggableList > .dragItem {
-        height: auto !important;
-        position: static !important;
-    }
-    #horizontalScrollBg, .contentWrap.achievementWrapper {
-        width: 100% !important;
-    }
-    .horizontalScrollInner:after {
-        display: none !important;
-    }
-    .horizontalScrollInner {
-        display: flex;
-        flex-flow: column-reverse;
-        padding-top: 30px !important;
-    }
-    #achievementDragList {
-        flex-flow: column;
-    }
-    .horizontalScrollDraggableList > .dragItem {
-        margin: 20px !important;
-        width: 100%;
-    }
-    li.dragItem.hoverShowBtn .hoverShowContent {
-        display: block !important;
-    }
-}
 /*---[end] Content >> Achievement---*/
 
 /*---Go to Top---*/
@@ -436,4 +364,11 @@ label.error {
 }
 .tar {
     text-align: right;
+}
+#register_box {
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #C7C7E2;
+    margin: 0 auto;
 }
