@@ -60,34 +60,32 @@ header.headerWrapper .functionBox {
     align-items: center;
     justify-content: flex-end;
 }
-.functionBox > .btn {
-    margin: 0 5px;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 5px 5px 0 0;
-}
 .functionBox > .btn > svg {
-    height: 1.3em;
+    height: 1.5em;
 }
 .functionBox > .btn > span {
     display: none;
     transition-delay: 0s;
     transition-duration: 0.4s;
 }
-/*hover show text
-.functionBox > .btn:hover > span, .functionBox > .btn:active > span {
-    display: inline-block;
-    transition: all 400ms ease-out;
-}*/
-
 .functionBox > .btn.langBtn {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.functionBox > .langBtn > span {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 20px;
+}
+.functionBox > div.menuHover:hover {
+    border-bottom: 3px solid #025da3;
 }
 .langOptionPannel {
     display:none;
     position: absolute;
     width: 100px;
-    top: calc(1.5em + 6px + 6px); /*langBtn Text Height + padding top and bottom*/
+    top: calc(2.6em + 6px + 6px); /*langBtn Text Height + padding top and bottom*/
     /* left: 0; */
     right: 0;
     text-align: center;
@@ -127,7 +125,7 @@ header.headerWrapper .functionBox {
 }
 
 /*mobile size*/
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
     .slideImageWrapper div.slideimg {
         height: 50vw;
         min-height: 180px;
@@ -135,6 +133,10 @@ header.headerWrapper .functionBox {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
+    }
+    .functionBox > .langBtn > span {
+        font-size: 16px;
+        padding: 10px;
     }
 }
 /*---[end] Content >> Slide Image---*/
