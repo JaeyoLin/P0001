@@ -63,6 +63,9 @@ img {
 .curPiont {
     cursor: pointer;
 }
+.news_box {
+    min-width: 450px !important;
+}
 /*---[start] Main Layout---*/
 .mainContainer {
     display: flex;

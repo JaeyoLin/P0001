@@ -94,12 +94,12 @@
                     <div class="flexItem">
                         <div class="title bkline" data-i18n="bulletin_title_1">News</div>
                         <div class="textWrapper">
-                            <div>元大金控</div>
-                            <div><span>股票代號：</span><span>2885</span></div>
+                            <div>XX銀行</div>
+                            <div><span>股票代號：</span><span>XXXX</span></div>
                             <div class="fCenter fRowFlex">
                                 <div class="fColorGold" style="line-height: 45px;">股價</div>
                                 <div class="fLeft">
-                                    <div class="fSizeLg fBold fColorGold">20.33</div>
+                                    <div class="fSizeLg fBold fColorGold">15.33</div>
                                     <div class="fSizeSm fColorGold">0.20 <i class="fa-solid fa-arrow-up"></i></div>
                                 </div>
                             </div>
@@ -108,21 +108,28 @@
                         </div>
                     </div>
                     
-                    <div class="flexItem">
+                    <div class="flexItem news_box">
                         <div class="title bkline" data-i18n="bulletin_title_2">Activity</div>
-                        <div class="textWrapper">
+
+                        <!-- Loader -->
+                        <div id="news_loader" class="textWrapper" style="display: none;">
                             <div class="newsInfoWrapper">
-                                <div class="fColorGray">06/09/2022</div>
-                                <div>花旗環球證券 Pan-Asia Regional Investor Conference</div>
+                                <div style="width: 150px; height: 15px;"></div>
+                                <div style="width: 300px; height: 20px;"></div>
                             </div>
                             <div class="newsInfoWrapper">
-                                <div class="fColorGray">04/26/2022</div>
-                                <div>富邦證券線上投資人會議</div>
+                                <div style="width: 150px; height: 15px;"></div>
+                                <div style="width: 300px; height: 20px;"></div>
                             </div>
                             <div class="newsInfoWrapper">
-                                <div class="fColorGray">03/17/2022</div>
-                                <div>美銀證券 2022 Virtual APAC TMT Conference</div>
+                                <div style="width: 150px; height: 15px;"></div>
+                                <div style="width: 300px; height: 20px;"></div>
                             </div>
+                        </div>
+
+                        <!-- News -->
+                        <div id="news_container" class="textWrapper" style="display: none;">
+                            <div id="news_list"></div>
                         </div>
                     </div>
 

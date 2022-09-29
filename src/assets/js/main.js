@@ -2,6 +2,9 @@ $(function() {
   // i18n 初始化
   i18nInit();
 
+  // News 初始化
+  newsInit();
+
   // Go to top 初始化
   goToTopInit();
 
@@ -113,6 +116,49 @@ function goToTopInit() {
     }, 500, 'easeInOutExpo');
     return false;
   });
+}
+
+/**
+ * newsInit
+ * News 初始化
+ * 
+ */
+function newsInit() {
+  openLoader('news_loader');
+
+  setTimeout(() => {
+    var tmpHtml = '';
+    var responseData = [
+      {
+        date: '2022-09-06',
+        title: '花旗環球證券 Pan-Asia Regional Investor Conference',
+      },
+      {
+        date: '2022-04-26',
+        title: '富邦證券線上投資人會議',
+      },
+      {
+        date: '2022-03-17',
+        title: '美銀證券 2022 Virtual APAC TMT Conference',
+      },
+    ];
+
+    responseData.forEach(function(news) {
+      tmpHtml = tmpHtml + '<div class="newsInfoWrapper">';
+      tmpHtml = tmpHtml + '  <div class="fColorGray">';
+      tmpHtml = tmpHtml + news.date;
+      tmpHtml = tmpHtml + '  </div>';
+      tmpHtml = tmpHtml + '  <div>';
+      tmpHtml = tmpHtml + news.title;
+      tmpHtml = tmpHtml + '  </div>';
+      tmpHtml = tmpHtml + '</div>';
+    });
+
+    $('#news_list').html(tmpHtml);
+
+    closeLoader('news_loader');
+    $('#news_container').show();
+  }, 2000);
 }
 
 /**
