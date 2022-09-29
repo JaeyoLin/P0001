@@ -11,6 +11,58 @@ img {
     height: auto;
 }
 
+/*--- Font style ---*/
+.fBold {
+    font-weight: bold;
+}
+.fColorGold {
+    color: #bc935b;
+}
+.fColorLightGold {
+    color: #c3b893;
+}
+.fColorGray {
+    color: #b6b6b6;
+}
+.fColorOrange {
+    color: #f26f28;
+}
+.fSizeXL {
+    font-size: 32px;
+}
+.fSizeLg {
+    font-size: 30px;
+}
+.fSizeMid {
+    font-size: 24px;
+}
+.fSizeSm {
+    font-size: 14px;
+}
+.fCenter {
+    text-align: center;
+}
+.fRight {
+    text-align: right;
+}
+.fLeft {
+    text-align: left;
+}
+.fRowFlex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+.fRowFlex.jcLeft {
+    justify-content: flex-start;
+}
+.fRowFlex > *:not(:last-child) {
+    margin-right: 10px;
+}
+.curPiont {
+    cursor: pointer;
+}
 /*---[start] Main Layout---*/
 .mainContainer {
     display: flex;
@@ -74,12 +126,6 @@ header.headerWrapper .functionBox {
     transition-delay: 0s;
     transition-duration: 0.4s;
 }
-/*hover show text
-.functionBox > .btn:hover > span, .functionBox > .btn:active > span {
-    display: inline-block;
-    transition: all 400ms ease-out;
-}*/
-
 .functionBox > .btn.langBtn {
     position: relative;
 }
@@ -155,22 +201,51 @@ header.headerWrapper .functionBox {
     border: 1px solid #c3b893;
     text-align: center;
     padding: 15px 20px;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 .contentSection .title {
     font-size: 1.5em;
     font-weight: bold;
     padding: 0 20px;
     text-align: center;
+    margin: 0 0 20px 0;
 }
 .contentSection .title.bkline {
-    position: relative;
-    top: calc(-0.5em - 20px);
+    position: absolute;
+    top: calc(-0.5em - 10px);
     overflow: hidden;
     background: white;
     display: inline-block;
 }
 .contentSection.grayBk .title.bkline {
     background: #f7f7f7;
+}
+.textWrapper {
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.newsInfoWrapper {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d2d2d2;
+}
+/*news date*/
+.newsInfoWrapper > div:nth-child(1) {
+    margin-bottom: 5px;
+}
+/*news subject*/
+.newsInfoWrapper > div:nth-child(2) {
+    margin-bottom: 10px;
+    word-break: break-word;
+    text-align: justify;
 }
 @media only screen and (max-width: 600px) {
     .contentFlexWrap {
@@ -192,10 +267,6 @@ header.headerWrapper .functionBox {
     flex: 1;
     text-align: left;
     padding-left: 10px;
-}
-.description .baseDate {
-    font-size: 14px;
-    color: #b6b6b6;
 }
 .description .totalStock {
     margin-right: 20px;
@@ -268,10 +339,26 @@ header.headerWrapper .functionBox {
 }
 .horizontalScrollDraggableList > .dragItem {
     min-width: 190px;
-    padding: 10px 0;
+    padding: 10px 10px;
     border-left: 1px solid #bc935b;
     position: relative;
     overflow: hidden;
+}
+li.dragItem:before {
+    content: '';
+    height: 50px;
+    width: 4px;
+    background-color: #bc935b;
+    display: block;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+li.dragItem.hoverShowBtn .hoverShowContent {
+    display: none;
+}
+li.dragItem.hoverShowBtn:hover .hoverShowContent {
+    display: block;
 }
 .horizontalScrollDraggableList > .dragItem:nth-child(3n+1) {
     top: 0;
@@ -324,6 +411,9 @@ header.headerWrapper .functionBox {
     .horizontalScrollDraggableList > .dragItem {
         margin: 20px !important;
         width: 100%;
+    }
+    li.dragItem.hoverShowBtn .hoverShowContent {
+        display: block !important;
     }
 }
 /*---[end] Content >> Achievement---*/

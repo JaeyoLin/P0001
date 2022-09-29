@@ -81,29 +81,70 @@
                 <div class="contentFlexWrap bulletinWrapper">
                     <div class="flexItem">
                         <div class="title bkline" data-i18n="bulletin_title_1">News</div>
-                        <div>
-                            <!--contents-->
+                        <div class="textWrapper">
+                            <div>元大金控</div>
+                            <div><span>股票代號：</span><span>2885</span></div>
+                            <div class="fCenter fRowFlex">
+                                <div class="fColorGold" style="line-height: 45px;">股價</div>
+                                <div class="fLeft">
+                                    <div class="fSizeLg fBold fColorGold">20.33</div>
+                                    <div class="fSizeSm fColorGold">0.20 <i class="fa-solid fa-arrow-up"></i></div>
+                                </div>
+                            </div>
+                            <div>2022/09/29 10:01</div>
+                            <a href="#lineStatisticId" class="fRight fColorOrange" style="display: block;">LINK<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                     
                     <div class="flexItem">
                         <div class="title bkline" data-i18n="bulletin_title_2">Activity</div>
-                        <div>
-                            <!--contents-->
+                        <div class="textWrapper">
+                            <div class="newsInfoWrapper">
+                                <div class="fColorGray">06/09/2022</div>
+                                <div>花旗環球證券 Pan-Asia Regional Investor Conference</div>
+                            </div>
+                            <div class="newsInfoWrapper">
+                                <div class="fColorGray">04/26/2022</div>
+                                <div>富邦證券線上投資人會議</div>
+                            </div>
+                            <div class="newsInfoWrapper">
+                                <div class="fColorGray">03/17/2022</div>
+                                <div>美銀證券 2022 Virtual APAC TMT Conference</div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="flexItem">
                         <div class="title bkline" data-i18n="bulletin_title_3">Focus</div>
-                        <div>
-                            <!--contents-->
+                        <div class="textWrapper">
+                            <div class="fRowFlex jcLeft curPiont">
+                                <i class="fa-solid fa-download fColorGold"></i>
+                                <div>
+                                    <div>最新營運概況</div>
+                                    <div>(2022/08)</div>
+                                </div>
+                            </div>
+                            <div class="fRowFlex jcLeft curPiont">
+                                <i class="fa-solid fa-download fColorGold"></i>
+                                <div>
+                                    <div>投資人簡報</div>
+                                    <div>(2022年第2季)</div>
+                                </div>
+                            </div>
+                            <div class="fRowFlex jcLeft curPiont">
+                                <i class="fa-solid fa-download fColorGold"></i>
+                                <div>
+                                    <div>最新財務報告</div>
+                                    <div>(2022年第2季)</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- 統計圖表 - 圓餅-->
-            <section class="contentSection grayBk">
+            <section class="contentSection">
                 <div class="contentFlexWrap statisticWrapper">
                     <div class="flexItem">
                         <div class="title bkline" data-i18n="statistic_title_1">Structure</div>
@@ -128,10 +169,10 @@
                         <!-- Pie Chart -->
                         <div id="pieChart_container" class="pieChartBox" style="display: none;">
                             <div class="description">
-                                <div class="baseDate">(基準日： 2022年08月20日)</div>
+                                <div class="fSizeSm fColorGray">(基準日： 2022年08月20日)</div>
                                 <div>
                                     <span class="totalStock">總股數</span>
-                                    <span class="totalStockNumber">12,501,558,992</span>
+                                    <span class="fSizeXL fColorGold">12,501,558,992</span>
                                 </div>
                                 <div class="stockData">
                                     <table class="table stockHolderTable">
@@ -183,7 +224,8 @@
             </section>
 
             <!-- 統計圖表 - line chart-->
-            <section class="contentSection">
+            <section class="contentSection grayBk" id="lineStatisticId">
+                <div class="title" >Line Chart</div>
                 <div class="contentWrap statisticLineWrapper">
                     <!--Time Fileter-->
                     <div></div>
@@ -206,12 +248,142 @@
                     <div class="contentWrap achievementWrapper">
                         <div class="horizontalScrollDraggable">
                             <ul id="achievementDragList" class="horizontalScrollDraggableList">
-                                <li class="dragItem">test data 1</li>
-                                <li class="dragItem">test data 2</li>
-                                <li class="dragItem">test data 3</li>
-                                <li class="dragItem">test data 4</li>
-                                <li class="dragItem">test data 5</li>
-                                <li class="dragItem">test data 6</li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">合併總資產</div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">3,023,019</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,759,239</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,414,319</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">單家股東權益</div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">269,035</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,759,239</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,414,319</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">合併稅前淨利</div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">44,141</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,759,239</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,414,319</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">合併稅後淨利</div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">37,191</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,759,239</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,414,319</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">單家稅後淨利</div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">34,866</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,759,239</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">2,414,319</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">每股盈餘<span class="fSizeSm">(單位:元)</span></div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">2.87</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">1.99</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">1.75</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">每股淨值<span class="fSizeSm">(單位:元)</span></div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">22.17</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">20.88</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">19.55</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dragItem hoverShowBtn">
+                                    <div class="achieveSubTitle">ROE</div>
+                                    <div class="assetsDateAmt">
+                                        <div>2021</div>
+                                        <div class="fSizeXL fColorGold">13.35%</div>
+                                    </div>
+                                    <div class="hoverShowContent">
+                                        <div class="assetsDateAmt">
+                                            <div>2020</div>
+                                            <div class="fSizeMid fColorLightGold fBold">12.35%</div>
+                                        </div>
+                                        <div class="assetsDateAmt">
+                                            <div>2019</div>
+                                            <div class="fSizeMid fColorLightGold fBold">11.35%</div>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
