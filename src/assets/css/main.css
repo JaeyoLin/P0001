@@ -388,7 +388,7 @@ label.error {
     margin: 0 auto;
 }
 
-table {
+.rwd_table {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -396,13 +396,13 @@ table {
 }
   
   
-table th,
-table td {
+.rwd_table th,
+.rwd_table td {
     padding: 20px;
     text-align: center;
 }
 
-tbody {
+.rwd_table tbody {
     color: #FFFFFF;
 }
   
