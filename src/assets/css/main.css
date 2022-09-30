@@ -60,6 +60,9 @@ img {
 .fLeft {
     text-align: left;
 }
+.w-full {
+    width: 100%;
+}
 .fRowFlex {
     display: flex;
     flex-flow: row wrap;
@@ -68,6 +71,9 @@ img {
 }
 .fRowFlex.jcLeft {
     justify-content: flex-start;
+}
+.fRowFlex.jcRight {
+    justify-content: flex-end;
 }
 .fRowFlex > *:not(:last-child) {
     margin-right: 10px;

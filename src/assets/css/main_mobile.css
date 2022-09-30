@@ -115,4 +115,7 @@
     .rwd_table td:last-child {
         border-bottom: 0;
     }
+    .achievement_more {
+        margin-right: 20px;
+    }
 }
