@@ -8,5 +8,8 @@
   "sign_up": "註冊",
   "language": "語系",
   "account": "帳號",
-  "password": "密碼"
+  "password": "密碼",
+  "achievement": "營運表現",
+  "performance": "表現",
+  "credit_rating": "信用評等"
 }

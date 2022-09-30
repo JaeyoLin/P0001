@@ -24,8 +24,20 @@ img {
 .fColorGray {
     color: #b6b6b6;
 }
+.fColorDarck {
+    color: #000000;
+}
 .fColorOrange {
     color: #f26f28;
+}
+.fColorWhite {
+    color: #FFFFFF;
+}
+.bColorDarkGray {
+    background-color: #334655;
+}
+.bColorLightGold {
+    background-color: #c3b893;
 }
 .fSizeXL {
     font-size: 32px;
@@ -375,3 +387,22 @@ label.error {
     background-color: #C7C7E2;
     margin: 0 auto;
 }
+
+table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+  
+  
+table th,
+table td {
+    padding: 20px;
+    text-align: center;
+}
+
+tbody {
+    color: #FFFFFF;
+}
+  
