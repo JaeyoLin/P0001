@@ -8,5 +8,8 @@
   "sign_up": "Sign up",
   "language": "Language",
   "account": "Account",
-  "password": "password"
+  "password": "password",
+  "achievement": "Achievement",
+  "performance": "Performance",
+  "credit_rating": "Credit Rating"
 }

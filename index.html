@@ -244,7 +244,7 @@
 
             <!-- 統計圖表 - line chart-->
             <section class="contentSection grayBk" id="lineStatisticId">
-                <div class="title" >Line Chart</div>
+                <div class="title" data-i18n="performance">Performance</div>
                 <div class="contentWrap statisticLineWrapper">
                     <!--Time Fileter-->
                     <div></div>
@@ -256,9 +256,9 @@
                 </div>
             </section>
 
-             <!-- Achievement -->
-             <section class="contentSection achievement">
-                <div class="title" >Achievement</div>
+            <!-- 成效 -->
+            <section class="contentSection achievement">
+                <div class="title" data-i18n="achievement">Achievement</div>
                 <!-- horizontal scroll-->
                 <div class="horizontalScrollInner">
                     <!-- horizontal scroll background-->
@@ -406,6 +406,43 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+            </section>
+  
+            <!-- 信用評等 -->
+            <section class="contentSection achievement bColorDarkGray">
+                <div class="title fColorWhite" data-i18n="credit_rating">Credit Rating</div>
+                <div class="contentFlexWrap statisticWrapper">
+                    <table>
+                        <thead>
+                          <tr class="bColorLightGold fColorDarck">
+                            <th>信用評等機構</th>
+                            <th>國際長期評等</th>
+                            <th>國際短期評等</th>
+                            <th>國內長期評等</th>
+                            <th>國內短期評等</th>
+                            <th>展望</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-label="信用評等機構">惠譽信評</td>
+                            <td data-label="國際長期評等">BBB+</td>
+                            <td data-label="國際短期評等">F2</td>
+                            <td data-label="國內長期評等">AA-(twn)</td>
+                            <td data-label="國內短期評等">F1+(twn)</td>
+                            <td data-label="展望">穩定</td>
+                          </tr>
+                          <tr>
+                            <td data-label="信用評等機構">中華信評</td>
+                            <td data-label="國際長期評等">---</td>
+                            <td data-label="國際短期評等">---</td>
+                            <td data-label="國內長期評等">twAA-</td>
+                            <td data-label="國內短期評等">twA-1+</td>
+                            <td data-label="展望">穩定</td>
+                          </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
         </section>

@@ -73,4 +73,46 @@
     .news_box {
         min-width: unset !important;
     }
+    table {
+        border: 0;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        background-color: #c3b893;
+    }
+
+    table tr {
+        display: block;
+        border: 1px solid #c3b893;
+        border-radius: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        text-align: right;
+        padding: 15px;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        color: #c3b893;
+        font-weight: bold;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
 }
