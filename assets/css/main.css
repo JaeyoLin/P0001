@@ -254,6 +254,9 @@ header.headerWrapper {
 /*---[end] Content >> Statistic---*/
 
 /*---[start] Content >> Achievement---*/
+section.contentSection.achievement {
+    padding-bottom: 0 !important;
+}
 .horizontalScrollWrap, .contentWrap.achievementWrapper {
     position: relative;
 }
@@ -312,10 +315,16 @@ li.dragItem:before {
     margin-left: -10px;
 }
 li.dragItem.hoverShowBtn .hoverShowContent {
-    display: none;
+    opacity: 0;
+    position: relative;
+    left: -50px;
 }
 li.dragItem.hoverShowBtn:hover .hoverShowContent {
-    display: block;
+    opacity: 1;
+    left: 0;
+    -webkit-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
 }
 .horizontalScrollDraggableList > .dragItem:nth-child(3n+1) {
     top: 0;

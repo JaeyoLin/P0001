@@ -257,7 +257,6 @@ function pieChartInit() {
  */
 function initDragContent() {
   var $drapList =  $("#achievementDragList");
-  var $wrap = $(".achievementWrapper");
   $drapList.draggable({ disabled: false });
   // check width
   if (screen.width < 600 || window.innerWidth < 600) {
@@ -267,26 +266,30 @@ function initDragContent() {
      $drapList.draggable({ disabled: true });
     return;
   }
+  var minSreenWidth = Math.min(screen.width, window.innerWidth);
+  var padding = 40;
+  minSreenWidth = minSreenWidth > 960 ? 960 : minSreenWidth - (padding * 2);
   // draggable
   var length =  $drapList.children('li').length;
   var singleWidth =  $drapList.children('li').outerWidth();
-  var distance = length * singleWidth - $wrap.width();
-   $drapList.parent().css({ 'width': length * singleWidth * 2 - 960, left: -distance });
-   $drapList.draggable({
-      axis: "x",
-      containment: "parent",
-      start: function () {
-        $drapList.addClass('grabbing');
-      },
-      drag: function () {
-        $drapList.addClass('grabbing');
-        var offset = ($drapList.css('left').slice(0, -2) - distance) / distance * 0.1;
-        $('#horizontalScrollBg').css('left', offset * 100 + '%');
-      },
-      stop: function () {
-         $drapList.removeClass('grabbing');
-      }
-    }).css({ 'width': length * singleWidth, 'left': distance });
+  var distance = length * singleWidth - minSreenWidth - padding;
+  $drapList.parent().css({ 'width': length * singleWidth * 2 - minSreenWidth, left: -distance });
+  $drapList.draggable({
+    axis: "x",
+    containment: "parent",
+    start: function () {
+      $drapList.addClass('grabbing');
+    },
+    drag: function (event, ui) {
+      $drapList.addClass('grabbing');
+      var offset = ($drapList.css('left').slice(0, -2) - distance) / distance * 0.1;
+      $('#horizontalScrollBg').css('left', offset * 100 + '%');
+    },
+    stop: function (event, ui) {
+        $drapList.removeClass('grabbing');
+    }
+  });
+  $drapList.css({ 'width': length * singleWidth , 'left': distance });
 }
 
 /**
@@ -337,12 +340,4 @@ function openLoader(elementId) {
  */
 function closeLoader(elementId) {
   $('#' + elementId).hide();
-}
-
-/**
- * 判斷是否支援 touch
- * @returns 
- */
-function isTouchSupported() {
-  return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
 }
