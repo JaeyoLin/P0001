@@ -1,0 +1,40 @@
+body {
+    background-color: #EEEEEE;
+}
+.gamelive_container {
+    width: 1024px;
+    margin: 0 auto;
+}
+.gamelive_container .d-flex {
+    display: flex;
+}
+.gamelive_container .flex-row {
+    flex-direction: row;
+}
+.gamelive_container .flex-column {
+    flex-direction: column;
+}
+.gamelive_container .flex-grow-1 {
+    flex-grow: 1;
+}
+.gamelive_container .flex-grow-2 {
+    flex-grow: 2;
+}
+.gamelive_container .justify-content-start {
+    justify-content: flex-start;
+}
+.gamelive_container .justify-content-center {
+    justify-content: center;
+}
+.gamelive_container .justify-content-end {
+    justify-content: flex-end;
+}
+.gamelive_container .align-center {
+    align-items: center;
+}
+.gamelive_container .h-300 {
+    height: 300px;
+}
+.gamelive_container .p-2 {
+    padding: 20px;
+}

@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Arial', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
     font-size: 16px;
@@ -62,6 +63,9 @@ img {
 }
 .w-full {
     width: 100%;
+}
+.w-300 {
+    width: 300px;
 }
 .fRowFlex {
     display: flex;
@@ -399,7 +403,7 @@ label.error {
     max-width: 700px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #C7C7E2;
+    background-color: #FFFFFF;
     margin: 0 auto;
 }
 
@@ -421,3 +425,8 @@ label.error {
     color: #FFFFFF;
 }
   
+.register_back {
+    background-image: url(../images/register_back.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
