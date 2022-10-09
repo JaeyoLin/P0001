@@ -1,7 +1,3 @@
-$.fn.exists = function () {
-  return this.length !== 0;
-}
-
 $(function() {
   // i18n 初始化
   i18nInit();
@@ -20,9 +16,6 @@ $(function() {
 
   // Login Validate Init
   loginValidateInit();
-
-  // Register Validate Init
-  registerValidateInit();
 
   $('.slideImageWrapper').slick({
     dots: false,
@@ -188,25 +181,22 @@ function pieChartInit() {
         },
       ],
     };
-
-    if (ctx !== undefined && ctx !== null) {
-      const myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: data,
-        plugins: [ChartDataLabels],
-        options: {
-          plugins: {
-            datalabels: {
-              formatter: (value) => {
-                return value + '%';
-              },
-              anchor: 'end',
-              align: 'end',
-            }
+    const myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      plugins: [ChartDataLabels],
+      options: {
+        plugins: {
+          datalabels: {
+            formatter: (value) => {
+              return value + '%';
+            },
+            anchor: 'end',
+            align: 'end',
           }
         }
-      });
-    }
+      }
+    });
 
     closeLoader('pieChart_loader');
     $('#pieChart_container').show();
@@ -220,49 +210,46 @@ function pieChartInit() {
  */
  function lineChartInit() {
   const ctx = document.getElementById('myLineChart');
-
-  if (ctx !== undefined && ctx !== null) {
-    const lineChart = new Chart(ctx, {
-      type: 'line',
-      data: LINE_CHART_DATA,
-      plugins: [{
-        beforeInit: function(chart, options) {
-          // before render char: 轉換數據為成長%數
-          const charConfigData = chart.config.data;
-          console.log(chart.config);
-          for (var i = 0; i < charConfigData.datasets.length; i++) {
-            const oriDataArr = charConfigData.datasets[i].oriData; // 原始數據
-            const baseVal = charConfigData.datasets[i].oriData[0];  // 第一筆為基底
-            for (var j = 0; j < charConfigData.labels.length; j++) {
-              const curDataVal = oriDataArr[j];
-              const growPercentage = (curDataVal - baseVal) / baseVal * 100;
-              charConfigData.datasets[i].data[j] = growPercentage; // rewrite Data
-            }
-          }
-        }
-      }],
-      options: {
-        interaction: {
-          mode: 'index'
-        },
-        plugins: {
-          responsive: true,
-          tooltip: {
-            callbacks: {
-                label: function(context) {
-                    // 客製 tooltip 顯示
-                    let label = context.dataset.label + ": ";
-                    const percentage = context.parsed.y;
-                    const realVal = context.dataset.oriData[context.dataIndex];
-                    label += percentage.toFixed(2) + "%" + " (" + realVal + ")";
-                    return label;
-                }
-            }
+  const lineChart = new Chart(ctx, {
+    type: 'line',
+    data: LINE_CHART_DATA,
+    plugins: [{
+      beforeInit: function(chart, options) {
+        // before render char: 轉換數據為成長%數
+        const charConfigData = chart.config.data;
+        console.log(chart.config);
+        for (var i = 0; i < charConfigData.datasets.length; i++) {
+          const oriDataArr = charConfigData.datasets[i].oriData; // 原始數據
+          const baseVal = charConfigData.datasets[i].oriData[0];  // 第一筆為基底
+          for (var j = 0; j < charConfigData.labels.length; j++) {
+            const curDataVal = oriDataArr[j];
+            const growPercentage = (curDataVal - baseVal) / baseVal * 100;
+            charConfigData.datasets[i].data[j] = growPercentage; // rewrite Data
           }
         }
       }
-    });
-  }
+    }],
+    options: {
+      interaction: {
+        mode: 'index'
+      },
+      plugins: {
+        responsive: true,
+        tooltip: {
+          callbacks: {
+              label: function(context) {
+                  // 客製 tooltip 顯示
+                  let label = context.dataset.label + ": ";
+                  const percentage = context.parsed.y;
+                  const realVal = context.dataset.oriData[context.dataIndex];
+                  label += percentage.toFixed(2) + "%" + " (" + realVal + ")";
+                  return label;
+              }
+          }
+        }
+      }
+    }
+  });
 }
 
 /**
@@ -332,64 +319,6 @@ function loginValidateInit() {
     validator.resetForm();
     $(".error").removeClass("error");
   });
-}
-
-/**
- * registerValidateInit
- * Register Validate Init
- * 
- */
- function registerValidateInit() {
-  var config = {
-    // lang: 'vi',
-    rules: {
-      account: "required",
-      password: {
-        required: true,
-        minlength: 8
-      },
-      confirm_password: {
-        required: true,
-        minlength: 8,
-        equalTo: "#password"
-      },
-      email: {
-        required: true,
-        email: true
-      },
-      mobile_phone: {
-        required: true
-        // required: true,
-        // number: true
-      },
-      invitation_code: "required"
-    },
-    // messages: {
-    //   mobile_phone: {
-    //     number: $.i18n('browser_recommendation'),
-    //   }
-    // },
-    submitHandler: function(form){
-      // form.submit();
-      console.log('TODO', 'Register');
-    }
-  };
-  
-  if ($("#registerForm").exists()) {
-    var validator = $("#registerForm").validate(config);
-
-    $("#btn_register").click(function() {
-      $('#account').val(null);
-      $('#password').val(null);
-      $('#confirm_password').val(null);
-      $('#email').val(null);
-      $('#mobile_phone').val(null);
-      $('#invitation_code').val(null);
-      
-      validator.resetForm();
-      $(".error").removeClass("error");
-    });
-  }
 }
 
 /**

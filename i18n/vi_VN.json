@@ -7,14 +7,9 @@
   "sign_in": "XXXXXXXXXXX",
   "sign_up": "XXXXXXXXXXX",
   "language": "XXXXXXXXXXX",
-  "account": "số tài khoản",
-  "password": "mật khẩu mở khóa",
-  "confirm_password": "Xác nhận mật khẩu",
-  "email": "E-mail",
-  "invitation_code": "Mã giới thiệu",
-  "mobile_phone": "điện thoại di động",
+  "account": "XXXXXXXXXXX",
+  "password": "XXXXXXXXXXX",
   "achievement": "XXXXXXXXXXXX",
   "performance": "XXXXXXXXXXXXXXX",
-  "credit_rating": "XXXXXXXXXXXXXXXX",
-  "register": "XXXXX"
+  "credit_rating": "XXXXXXXXXXXXXXXX"
 }

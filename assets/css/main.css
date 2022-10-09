@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Arial', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
     font-size: 16px;
@@ -63,9 +62,6 @@ img {
 }
 .w-full {
     width: 100%;
-}
-.w-300 {
-    width: 300px;
 }
 .fRowFlex {
     display: flex;
@@ -142,20 +138,20 @@ header.headerWrapper {
 
 /*---[start] Content >> Slide Image---*/
 .slideImageWrapper div.slideimg {
-    height: 400px;
+    height: 420px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center
 }
 /*設定輪播廣告圖檔區域*/
 .slideImageWrapper div.slide1 {
-    background-image: url("https://dummyimage.com/2000x400/e5e4df/000000.png&text=ad1");
+    background-image: url("https://dummyimage.com/1440x420/e5e4df/000000.png&text=ad1");
 }
 .slideImageWrapper div.slide2 {
-    background-image: url("https://dummyimage.com/2000x400/a29c7a/ffffff.png&text=ad2");
+    background-image: url("https://dummyimage.com/1440x420/a29c7a/ffffff.png&text=ad2");
 }
 .slideImageWrapper div.slide3 {
-    background-image: url("https://dummyimage.com/2000x400/28251c/ffffff.png&text=ad3");
+    background-image: url("https://dummyimage.com/1440x420/28251c/ffffff.png&text=ad3");
 }
 /*---[end] Content >> Slide Image---*/
 
@@ -403,7 +399,7 @@ label.error {
     max-width: 700px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: #C7C7E2;
     margin: 0 auto;
 }
 
@@ -425,8 +421,3 @@ label.error {
     color: #FFFFFF;
 }
   
-.register_back {
-    background-image: url(../images/register_back.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
