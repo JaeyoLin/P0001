@@ -7,7 +7,13 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
+    background-color: #585858;
+    color: #FFFFFF;
 }
+.gamelive_container .font_color_yellow {
+    color: rgb(255, 223, 27);
+}
+
 .gamelive_container .d-flex {
     display: flex;
 }
@@ -35,6 +41,9 @@ body {
 .gamelive_container .align-center {
     align-items: center;
 }
+.gamelive_container .h-350 {
+    height: 350px;
+}
 .gamelive_container .h-300 {
     height: 300px;
 }
@@ -56,7 +65,7 @@ body {
 .gamelive_container #bok_total {
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #DBE2EF;
+    background-color: #585858;
 }
 .gamelive_container .bok_title {
     flex-basis: 80px;
@@ -71,9 +80,17 @@ body {
 }
 .gamelive_container .add_button {
     width: 70px;
+    height: 32px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    border: 1px solid #1cb585;
+    color: #FFFFFF;
+    background: rgba(40,255,187,0.35);
+    border-radius: 4px;
 }
+.gamelive_container .add_button:hover {
+    background: rgba(40,255,187,0.7);
+}
+
 .gamelive_container #add_setting_select {
     min-width: 100%;
     text-align: center;
@@ -81,6 +98,7 @@ body {
     border: 1px solid #3F72AF;
     border-radius: 5px;
     cursor: pointer;
+    height:
 }
 .gamelive_container #box_add_setting {
     margin-top: 20px;
@@ -122,4 +140,14 @@ body {
 
 .gamelive_container #box_tools_result {
     margin-top: 0px;
+}
+.gamelive_container .btn_submit {
+    width: 100%; 
+    color: #333; 
+    background-color: #ffdf1b;
+    height: 32px;
+    border-radius: 4px;
+}
+.gamelive_container .btn_submit:hover {
+    background-color: #e4e4e4;
 }
