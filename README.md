@@ -2,8 +2,8 @@
 
 ## Decsription
 
-[Live DMEO 1](https://jaeyolin.github.io/P0001)
-[Live DMEO 2](https://jaeyolin.github.io/P0001/gamelive/gamelive.html)
+- [Live DMEO 1](https://jaeyolin.github.io/P0001)
+- [Live DMEO 2](https://jaeyolin.github.io/P0001/gamelive/gamelive.html)
 
 ## Folder Structure
 
