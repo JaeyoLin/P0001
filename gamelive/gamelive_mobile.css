@@ -1,4 +1,7 @@
 @media only screen and (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
     .gamelive_container #box_three_balls_block {
         display: none;
     }
@@ -55,5 +58,8 @@
     }
     .gamelive_container #box_tools_result {
         margin-top: 20px;
+    }
+    .gamelive_container .add_button {
+        margin-bottom: 10px;
     }
 }
