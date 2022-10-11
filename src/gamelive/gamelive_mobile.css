@@ -1,0 +1,26 @@
+@media only screen and (max-width: 576px) {
+    #box_three_balls_block {
+        display: none;
+    }
+    #box_live_video {
+        width: 100%;
+    }
+    #box_last_number {
+        display: none;
+    }
+    #box_add_setting_button {
+        display: none;
+    }
+    #box_add_setting_select {
+        display: unset;
+    }
+    #box_tools {
+        flex-direction: column;
+    }
+    #box_tools_result {
+        width: 100%;
+    }
+    .bok_title {
+        width: 80px;
+    }
+}
