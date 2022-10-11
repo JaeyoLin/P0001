@@ -58,20 +58,23 @@ body {
     margin-bottom: 20px;
     background-color: #DBE2EF;
 }
-.bok_title {
-    width: 80px;
+.gamelive_container .bok_title {
+    flex-basis: 80px;
+	flex-grow: 0;
+	flex-shrink: 0;
 }
-#box_add_setting_button {
+.gamelive_container #box_add_setting_button {
     display: flex;
 }
-#box_add_setting_select {
+.gamelive_container #box_add_setting_select {
     display: none;
 }
-.add_button {
+.gamelive_container .add_button {
     width: 70px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
-#add_setting_select {
+.gamelive_container #add_setting_select {
     min-width: 100%;
     text-align: center;
     padding: 10px;
@@ -79,7 +82,44 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-#box_add_setting {
+.gamelive_container #box_add_setting {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.gamelive_container #box_result {
+    width: 70%;
+}
+.gamelive_container #box_input {
+    flex-direction: row;
+}
+.gamelive_container #box_input_controller {
+    width: 30%;
+}
+.gamelive_container #box_input_left {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+}
+.gamelive_container #box_input_center {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.gamelive_container #box_input_right {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
+.gamelive_container #box_result_1 {
+    width: 70%;
+    display: unset;
+}
+.gamelive_container #box_result_2 {
+    display: none;
+}
+
+.gamelive_container #box_tools_result {
+    margin-top: 0px;
 }
