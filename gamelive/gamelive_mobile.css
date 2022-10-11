@@ -1,0 +1,59 @@
+@media only screen and (max-width: 576px) {
+    .gamelive_container #box_three_balls_block {
+        display: none;
+    }
+    .gamelive_container #box_live_video {
+        width: 100%;
+    }
+    .gamelive_container #box_last_number {
+        display: none;
+    }
+    .gamelive_container #box_add_setting_button {
+        display: none;
+    }
+    .gamelive_container #box_add_setting_select {
+        display: unset;
+    }
+    .gamelive_container #box_tools {
+        flex-direction: column;
+    }
+    .gamelive_container #box_tools_result {
+        width: 100%;
+    }
+    .gamelive_container #box_result {
+        width: 100%;
+    }
+    .gamelive_container #box_input {
+        flex-direction: column;
+    }
+    .gamelive_container #box_input_controller {
+        width: 100%;
+    }
+    .gamelive_container #box_input_controller {
+        flex-direction: row;
+    }
+    .gamelive_container #box_tools_block {
+        width: 100%;
+    }
+    .gamelive_container #box_input_left {
+        width: 33.3%;
+        padding-right: 5px;
+    }
+    .gamelive_container #box_input_center {
+        width: 33.3%;
+    }
+    .gamelive_container #box_input_right {
+        width: 33.3%;
+        padding-left: 5px;
+    }
+    .gamelive_container #box_result_1 {
+        display: none;
+    }
+    .gamelive_container #box_result_2 {
+        display: flex;
+        flex-direction: row;
+    }
+    .gamelive_container #box_tools_result {
+        margin-top: 20px;
+    }
+}

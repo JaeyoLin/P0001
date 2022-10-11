@@ -1,9 +1,12 @@
 body {
     background-color: #EEEEEE;
+    font-size: 16px;
 }
 .gamelive_container {
-    width: 1024px;
+    max-width: 1024px;
+    width: 100%;
     margin: 0 auto;
+    padding: 20px;
 }
 .gamelive_container .d-flex {
     display: flex;
@@ -35,6 +38,88 @@ body {
 .gamelive_container .h-300 {
     height: 300px;
 }
-.gamelive_container .p-2 {
-    padding: 20px;
+.gamelive_container .h-200 {
+    height: 200px;
+}
+.gamelive_container .p-1 {
+    padding: 10px;
+}
+.gamelive_container .m-1 {
+    margin: 10px;
+}
+.gamelive_container .w-65-per {
+    width: 65%;
+}
+.gamelive_container .w-35-per {
+    width: 35%;
+}
+.gamelive_container #bok_total {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #DBE2EF;
+}
+.gamelive_container .bok_title {
+    flex-basis: 80px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.gamelive_container #box_add_setting_button {
+    display: flex;
+}
+.gamelive_container #box_add_setting_select {
+    display: none;
+}
+.gamelive_container .add_button {
+    width: 70px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.gamelive_container #add_setting_select {
+    min-width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #3F72AF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.gamelive_container #box_add_setting {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.gamelive_container #box_result {
+    width: 70%;
+}
+.gamelive_container #box_input {
+    flex-direction: row;
+}
+.gamelive_container #box_input_controller {
+    width: 30%;
+}
+.gamelive_container #box_input_left {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+}
+.gamelive_container #box_input_center {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.gamelive_container #box_input_right {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
+.gamelive_container #box_result_1 {
+    width: 70%;
+    display: unset;
+}
+.gamelive_container #box_result_2 {
+    display: none;
+}
+
+.gamelive_container #box_tools_result {
+    margin-top: 0px;
 }

@@ -8,8 +8,13 @@
   "sign_up": "Sign up",
   "language": "Language",
   "account": "Account",
-  "password": "password",
+  "password": "Password",
+  "confirm_password": "Confirm Password",
+  "email": "E-mail",
+  "invitation_code": "Invitation Code",
+  "mobile_phone": "Mobile Phone",
   "achievement": "Achievement",
   "performance": "Performance",
-  "credit_rating": "Credit Rating"
+  "credit_rating": "Credit Rating",
+  "register": "Register"
 }
