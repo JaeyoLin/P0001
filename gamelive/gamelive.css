@@ -90,15 +90,18 @@ body {
 .gamelive_container .add_button:hover {
     background: rgba(40,255,187,0.7);
 }
-
 .gamelive_container #add_setting_select {
     min-width: 100%;
     text-align: center;
     padding: 10px;
-    border: 1px solid #3F72AF;
-    border-radius: 5px;
+    border: 1px solid #1cb585;
+    background: rgba(40,255,187,0.35);
+    color: #FFFFFF;
+    border-radius: 4px;
     cursor: pointer;
-    height:
+}
+.gamelive_container #add_setting_select:hover {
+    background: rgba(40,255,187,0.7);
 }
 .gamelive_container #box_add_setting {
     margin-top: 20px;
