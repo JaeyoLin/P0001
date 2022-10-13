@@ -62,4 +62,7 @@
     .gamelive_container .add_button {
         margin-bottom: 10px;
     }
+    .gamelive_container #live_video {
+        align-items: center;
+    }
 }
