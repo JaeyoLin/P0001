@@ -3,7 +3,7 @@ body {
     font-size: 16px;
 }
 .gamelive_container {
-    max-width: 1024px;
+    max-width: 1040px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -46,6 +46,9 @@ body {
 .gamelive_container .align-center {
     align-items: center;
 }
+.gamelive_container .flex-wrap {
+    flex-wrap: wrap;
+}
 .gamelive_container .h-350 {
     height: 350px;
 }
@@ -57,6 +60,9 @@ body {
 }
 .gamelive_container .p-1 {
     padding: 10px;
+}
+.gamelive_container .p-2 {
+    padding: 20px;
 }
 .gamelive_container .m-1 {
     margin: 10px;
@@ -166,4 +172,53 @@ body {
 .gamelive_container .btn_submit:hover {
     background-color: #e4e4e4;
     border: 1px solid #e4e4e4;
+}
+.gamelive_container .ball_container {
+    margin: 5px;
+    height: 430px;
+    /* border: 1px solid black; */
+    background-color: #F5EDDC;
+    border-radius: 10px;
+}
+.gamelive_container .history_ball {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0px; 
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+    overflow: hidden;
+}
+.gamelive_container .history_number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #FA9494;
+    margin-top: 7px;
+}
+.gamelive_container .ball {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 3px; 
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+    overflow: hidden;
+    cursor: pointer;
+}
+.gamelive_container .ball:hover, .ball.active {
+    background: radial-gradient(circle at 50% 40%, #FFE153, #FFDC35 66%, #9b5050 100%);
+}
+.gamelive_container .number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #FA9494;
+    margin-top: 5px;
 }
