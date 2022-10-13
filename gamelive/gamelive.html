@@ -21,20 +21,28 @@
         <div class="d-flex h-350">
             <div id="box_three_balls_block" class="w-65-per d-flex flex-column" style="height: 100%">
                 <div>XXXX: <span class="font_color_yellow">888888</span></div>
+
+                <!-- 左上球 -->
                 <div class="d-flex flex-row" style="height: 100%">
-                    <div class="flex-grow-1 m-1" style="background-color: #F9F7F7;"></div>
-                    <div class="flex-grow-1 m-1" style="background-color: #F9F7F7;"></div>
-                    <div class="flex-grow-1 m-1" style="background-color: #F9F7F7;"></div>
+                    <div class="flex-grow-1 p-1" style="background-color: #F9F7F7;"></div>
+                    <div class="flex-grow-1 p-1" style="background-color: #F9F7F7;"></div>
+                    <div class="flex-grow-1 p-1" style="background-color: #F9F7F7;"></div>
                 </div>
             </div>
             <div id="box_live_video" class="w-35-per d-flex flex-column">
                 <div id="box_last_number">XXXX: <span class="font_color_yellow">888888</span></div>
+
+                <!-- 影片區塊 -->
                 <div class="flex-grow-1" style="background-color: #DBE2EF; height: 100%"></div>
             </div>
         </div>
+
+        <!-- 總額 -->
         <div id="bok_total">
             <span>XX: <span class="font_color_yellow">888888</span></span>
         </div>
+
+        <!-- 追號設定 -->
         <div id="box_add_setting" class="d-flex flex-row">
             <div class="bok_title d-flex align-center">XXXX: </div>
             <div id="box_add_setting_button" class="flex-grow-1" style="flex-wrap: wrap;">
@@ -53,9 +61,12 @@
                 <div id="add_setting_select" >選擇追號</div>            
             </div>
         </div>
+
+        <!-- 下方區塊 -->
         <div id="box_tools" class="d-flex flex-row">
             <div id="box_tools_block" class="w-65-per d-flex flex-column">
-                <div class="d-flex flex-row" style="margin-top: 20px;">
+                <!-- 單位快選 -->
+                <div class="d-flex flex-row" style="margin-top: 22px;">
                     <div class="bok_title d-flex align-center">XXXX: </div>
                     <div class="d-flex flex-grow-1" style="flex-wrap: wrap;">
                         <button class="add_button">1</button>
@@ -66,12 +77,12 @@
                         <button class="add_button">100</button>
                     </div>
                 </div>
-                <div class="d-flex flex-row" style="margin-top: 20px;">
+                <div class="d-flex flex-row" style="margin-top: 22px;">
                     <div class="bok_title d-flex align-center">XXXX: </div>
                     <div id="box_input" class="d-flex flex-grow-1" >
                         <div id="box_input_controller" class="d-flex flex-column">
                             <div id="box_input_left">
-                                <input style="width: 100%; line-height: 24px; color:black"  />
+                                <input style="width: 100%; line-height: 25px; color:black"  />
                             </div>
                             <div id="box_input_center">
                                 <button class="btn_submit">單位歸零</button> 
@@ -80,15 +91,41 @@
                                 <button class="btn_submit">送出</button>
                             </div>
                         </div>
-                        <div id="box_result_1" style="background-color: #14FFEC; margin: 5px;">22_1</div>
+                        <div id="box_result_1" class="d-flex align-center">
+                            <div class="flex-grow-1 d-flex align-center">
+                                <span class="font_color_green font_bold" style="margin-right: 20px;">四星預計中獎:</span>
+                                <span class="font_color_yellow">XXXXX</span>
+                            </div>
+                            <div class="flex-grow-1 d-flex align-center">
+                                <span class="font_color_green font_bold" style="margin-right: 20px;">三星預計中獎:</span>
+                                <span class="font_color_yellow">XXXXX</span>
+                            </div>
+                            <div class="flex-grow-1 d-flex align-center">
+                                <span class="font_color_green font_bold" style="margin-right: 20px;">不中預計結果:</span>
+                                <span class="font_color_yellow">XXXXX</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id="box_result_2" class="d-flex flex-row" style="margin-top: 20px;">
-                    <div class="bok_title d-flex align-center">XXXX: </div>
-                    <div class="d-flex flex-grow-1 justify-content-center align-center h-200" style="background-color: #14FFEC;">22_2</div>
+                <div id="box_result_2" class="d-flex flex-row" style="margin-top: 20px; height: 100px;">
+                    <div class="bok_title d-flex align-center">預計結果: </div>
+                    <div class="d-flex flex-grow-1 flex-column" style="background-color: #7B7B7B; border-radius: 5px; padding-left: 20px;">
+                        <div class="flex-grow-1 d-flex align-center">
+                            <span class="font_color_green font_bold" style="margin-right: 20px;">四星預計中獎:</span>
+                            <span class="font_color_yellow">XXXXX</span>
+                        </div>
+                        <div class="flex-grow-1 d-flex align-center">
+                            <span class="font_color_green font_bold" style="margin-right: 20px;">三星預計中獎:</span>
+                            <span class="font_color_yellow">XXXXX</span>
+                        </div>
+                        <div class="flex-grow-1 d-flex align-center">
+                            <span class="font_color_green font_bold" style="margin-right: 20px;">不中預計結果:</span>
+                            <span class="font_color_yellow">XXXXX</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="box_tools_result" class="w-35-per h-200" style="background-color: #DFD3C3;">AAA</div>
+            <div id="box_tools_result" class="w-35-per" style="background-color: #DFD3C3;">AAA</div>
         </div>
     </div>
     
