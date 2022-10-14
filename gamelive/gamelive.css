@@ -73,6 +73,12 @@ body {
 .gamelive_container .w-35-per {
     width: 35%;
 }
+.gamelive_container .w-60-per {
+    width: 60%;
+}
+.gamelive_container .w-40-per {
+    width: 40%;
+}
 .gamelive_container #bok_total {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -208,10 +214,6 @@ body {
     position: relative;
     background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
     overflow: hidden;
-    cursor: pointer;
-}
-.gamelive_container .ball:hover, .ball.active {
-    background: radial-gradient(circle at 50% 40%, #FFE153, #FFDC35 66%, #9b5050 100%);
 }
 .gamelive_container .number {
     position: absolute;
@@ -221,4 +223,68 @@ body {
     font-size: 14px;
     color: #FA9494;
     margin-top: 5px;
+}
+
+.gamelive_container .table_container {
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    color: #ffffff;
+}
+.gamelive_container .table_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffc0cb;
+    color: #bb6573;
+}
+.gamelive_container .table_row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ece1e1;
+    color: #8d6161;
+}
+.gamelive_container .cancel_button {
+    width: 50px;
+    background-color: #E14D2A;
+    border: 1px solid #E14D2A;
+    border-radius: 5px;
+    color: #EEEEEE;
+}
+.gamelive_container .cancel_button:hover {
+    background-color: #FD841F;
+    border: 1px solid #FD841F;
+}
+.gamelive_container .column_number {
+    width: 35%;
+    text-align: center;
+    padding: 10px;
+}
+.gamelive_container .column_time {
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+}
+.gamelive_container .column_unit {
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+}
+.gamelive_container .column_action {
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+}
+.gamelive_container .table_container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #ffc0cb;
+}
+.gamelive_container .table_container::-webkit-scrollbar {
+  width: 13px;
+  background-color: black;
+}
+.gamelive_container .table_container::-webkit-scrollbar-thumb {
+  background-color: #bb6573;
 }
