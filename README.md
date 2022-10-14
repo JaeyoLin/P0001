@@ -3,7 +3,8 @@
 ## Decsription
 
 - [Live DMEO 1](https://jaeyolin.github.io/P0001)
-- [Live DMEO 2](https://jaeyolin.github.io/P0001/gamelive/gamelive.html)
+- [Live DMEO 2](https://jaeyolin.github.io/P0001/gamelive/gamelive1.html)
+- [Live DMEO 3](https://jaeyolin.github.io/P0001/gamelive/gamelive2.html)
 
 ## Folder Structure
 
@@ -16,6 +17,12 @@
 │    ├── admin                               # 管理者頁面
 │    │     └── lottery.html                  # 球球
 │    ├── assets                              # JS, CSS
+│    ├── gamelive                            # 球球直播
+│    │     ├── gamelive_mobile.css                    
+│    │     ├── gamelive.css                   
+│    │     ├── gamelive.js   
+│    │     ├── gamelive1.html                # 直的
+│    │     └── gamelive2.html                # 橫的
 │    ├── i18n                                # 多國語系
 │    │     ├── en_US.json                    
 │    │     ├── vi_VN.json                    
