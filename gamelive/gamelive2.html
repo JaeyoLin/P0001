@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Live</title>
+
+    <link rel="stylesheet" href="../libs/normalize@8.0.1/normalize.css">
+    <link rel="stylesheet" href="../libs/bootstrap@3.3.7/bootstrap.min.css">
+    <link rel="stylesheet" href="../libs/mobile-select@1.3.3/mobile-select.css">
+    <link rel="stylesheet" href="./gamelive.css">
+    <link rel="stylesheet" href="./gamelive_mobile.css">
+
+    <script src="../libs/jquery-ui@1.12.4/jquery-1.12.4.min.js"></script>
+    <script src="../libs/mobile-select@1.3.3/mobile-select.iife.js"></script>
+    <script src="./gamelive.js"></script>
+</head>
+<body>
+    <div class="gamelive_container">
+        <div class="d-flex" style="min-height: 200px;">
+            <div id="box_three_balls_block" class="w-65-per d-flex flex-column" style="height: 100%">
+                <div class="d-flex align-center" style="height: 45px;">
+                    當期期數: <span style="margin-left: 20px;" class="font_color_yellow">888888</span>
+                </div>
+
+                <!-- 左上球 -->
+                <div class="d-flex flex-row" style="height: 100%; padding-right: 10px;">
+                    <div class="flex-grow-1">
+                        <div id="area_a" style="padding-top: 10px;" class="d-flex flex-row flex-wrap ball_container2 align-center">
+                            <div class="ball2"><span class="number">1</span></div>
+                            <div class="ball2"><span class="number">2</span></div>
+                            <div class="ball2"><span class="number">3</span></div>
+                            <div class="ball2"><span class="number">4</span></div>
+                            <div class="ball2"><span class="number">5</span></div>
+                            <div class="ball2"><span class="number">6</span></div>
+                            <div class="ball2"><span class="number">7</span></div>
+                            <div class="ball2"><span class="number">8</span></div>
+                            <div class="ball2"><span class="number">9</span></div>
+                            <div class="ball2"><span class="number">10</span></div>
+                            <div class="ball2"><span class="number">11</span></div>
+                            <div class="ball2"><span class="number">12</span></div>
+                            <div class="ball2"><span class="number">13</span></div>
+                            <div class="ball2"><span class="number">14</span></div>
+                            <div class="ball2"><span class="number">15</span></div>
+                            <div class="ball2"><span class="number">16</span></div>
+                            <div class="ball2"><span class="number">17</span></div>
+                            <div class="ball2"><span class="number">18</span></div>
+                            <div class="ball2"><span class="number">19</span></div>
+                            <div class="ball2"><span class="number">20</span></div>
+                            <div class="ball2"><span class="number">21</span></div>
+                            <div class="ball2"><span class="number">22</span></div>
+                            <div class="ball2"><span class="number">23</span></div>
+                            <div class="ball2"><span class="number">24</span></div>
+                            <div class="ball2"><span class="number">25</span></div>
+                            <div class="ball2"><span class="number">26</span></div>
+                            <div class="ball2"><span class="number">27</span></div>
+                            <div class="ball2"><span class="number">28</span></div>
+                            <div class="ball2"><span class="number">29</span></div>
+                            <div class="ball2"><span class="number">30</span></div>
+                            <div class="ball2"><span class="number">31</span></div>
+                            <div class="ball2"><span class="number">32</span></div>
+                            <div class="ball2"><span class="number">33</span></div>
+                            <div class="ball2"><span class="number">34</span></div>
+                            <div class="ball2"><span class="number">35</span></div>
+                            <div class="ball2"><span class="number">36</span></div>
+                            <div class="ball2"><span class="number">37</span></div>
+                            <div class="ball2"><span class="number">38</span></div>
+                            <div class="ball2"><span class="number">39</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="box_live_video" class="w-35-per d-flex flex-column">
+                <div id="box_last_number" class="d-flex justify-content-start flex-row">
+                    <div class="d-flex align-center" style="width: 100px;">
+                        上期期號: 
+                    </div>
+                    <div>
+                        <div class="history_ball"><span class="history_number">1</span></div>
+                        <div class="history_ball"><span class="history_number">2</span></div>
+                        <div class="history_ball"><span class="history_number">3</span></div>
+                        <div class="history_ball"><span class="history_number">4</span></div>
+                        <div class="history_ball"><span class="history_number">5</span></div>
+                    </div>
+                </div>
+
+                <!-- 影片區塊 -->
+                <div id="live_video" class="flex-grow-1 d-flex justify-content-center">
+                    <iframe width="100%" height="250"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- 總額 -->
+        <div id="bok_total">
+            <span style="margin-right: 20px;">總額:</span>
+            <span class="font_color_yellow">$</span>
+            <span class="font_color_yellow">888888</span>
+        </div>
+
+        <!-- 追號設定 -->
+        <div id="box_add_setting" class="d-flex flex-row">
+            <div class="bok_title d-flex align-center">追號設定: </div>
+            <div id="box_add_setting_button" class="flex-grow-1" style="flex-wrap: wrap;">
+                <button class="add_button">1</button>
+                <button class="add_button">2</button>
+                <button class="add_button">3</button>
+                <button class="add_button">4</button>
+                <button class="add_button">5</button>
+                <button class="add_button">10</button>
+                <button class="add_button">15</button>
+                <button class="add_button">20</button>
+                <button class="add_button">25</button>
+                <button class="add_button">30</button>
+            </div>
+            <div id="box_add_setting_select" class="flex-grow-1">
+                <div id="add_setting_select" >選擇追號</div>            
+            </div>
+        </div>
+
+        <!-- 下方區塊 -->
+        <div id="box_tools" class="d-flex flex-row">
+            <div id="box_tools_block" class="w-60-per d-flex flex-column">
+                <!-- 單位快選 -->
+                <div class="d-flex flex-row" style="margin-top: 22px;">
+                    <div class="bok_title d-flex align-center">單位快選: </div>
+                    <div class="d-flex flex-grow-1" style="flex-wrap: wrap;">
+                        <button class="add_button">1</button>
+                        <button class="add_button">5</button>
+                        <button class="add_button">10</button>
+                        <button class="add_button">20</button>
+                        <button class="add_button">50</button>
+                        <button class="add_button">100</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-row" style="margin-top: 22px;">
+                    <div class="bok_title d-flex align-center">購買單位: </div>
+                    <div id="box_input" class="d-flex flex-grow-1" >
+                        <div id="box_input_controller" class="d-flex flex-column">
+                            <div id="box_input_left">
+                                <input style="width: 100%; line-height: 25px; color:black"  />
+                            </div>
+                            <div id="box_input_center">
+                                <button class="btn_submit">單位歸零</button> 
+                            </div>
+                            <div id="box_input_right">
+                                <button class="btn_submit">送出</button>
+                            </div>
+                        </div>
+                        <div id="box_result_1" class="d-flex align-center">
+                            <div class="flex-grow-1 d-flex align-center">
+                                <span class="font_color_green font_bold" style="margin-right: 20px;">四星預計中獎:</span>
+                                <span class="font_color_yellow">XXXXX</span>
+                            </div>
+                            <div class="flex-grow-1 d-flex align-center">
+                                <span class="font_color_green font_bold" style="margin-right: 20px;">三星預計中獎:</span>
+                                <span class="font_color_yellow">XXXXX</span>
+                            </div>
+                            <div class="flex-grow-1 d-flex align-center">
+                                <span class="font_color_green font_bold" style="margin-right: 20px;">不中預計結果:</span>
+                                <span class="font_color_yellow">XXXXX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="box_result_2" class="d-flex flex-row" style="margin-top: 20px; height: 100px;">
+                    <div class="bok_title d-flex align-center">預計結果: </div>
+                    <div class="d-flex flex-grow-1 flex-column" style="background-color: #7B7B7B; border-radius: 5px; padding-left: 20px;">
+                        <div class="flex-grow-1 d-flex align-center">
+                            <span class="font_color_green font_bold" style="margin-right: 20px;">四星預計中獎:</span>
+                            <span class="font_color_yellow">XXXXX</span>
+                        </div>
+                        <div class="flex-grow-1 d-flex align-center">
+                            <span class="font_color_green font_bold" style="margin-right: 20px;">三星預計中獎:</span>
+                            <span class="font_color_yellow">XXXXX</span>
+                        </div>
+                        <div class="flex-grow-1 d-flex align-center">
+                            <span class="font_color_green font_bold" style="margin-right: 20px;">不中預計結果:</span>
+                            <span class="font_color_yellow">XXXXX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="box_tools_result" class="w-40-per">
+                <div class="table_container">
+                    <div class="table_header">
+                        <div class="column_number table_header_color">注單號</div>
+                        <div class="column_time table_header_color">時間</div>
+                        <div class="column_unit table_header_color">單位</div>
+                        <div class="column_action table_header_color">操作</div>
+                    </div>
+                    <div id="data_row"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
