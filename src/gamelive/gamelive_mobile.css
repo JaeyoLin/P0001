@@ -65,4 +65,10 @@
     .gamelive_container #live_video {
         align-items: center;
     }
+    .gamelive_container #box_tools_result {
+        min-height: 300px;
+    }
+    .gamelive_container .table_container {
+        max-height: 300px;
+    }
 }
