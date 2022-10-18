@@ -39,14 +39,15 @@
         width: 100%;
     }
     .gamelive_container #box_input_left {
-        width: 33.3%;
+        width: 100%;
         padding-right: 5px;
     }
     .gamelive_container #box_input_center {
-        width: 33.3%;
+        width: 40%;
+        margin-right: 10px;
     }
     .gamelive_container #box_input_right {
-        width: 33.3%;
+        width: 40%;
         padding-left: 5px;
     }
     .gamelive_container #box_result_1 {
