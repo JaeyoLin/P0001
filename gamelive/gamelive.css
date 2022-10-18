@@ -96,11 +96,18 @@ body {
     display: none;
     font-size: 18px;
 }
+.gamelive_container .add_button_box {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .gamelive_container .add_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
+    width: 100%;
     height: 30px;
     background-image: url('../assets/images/btn_add_small.svg');
     background-size: cover;
@@ -125,14 +132,18 @@ body {
 .gamelive_container .quick_button:hover {
     transform: scale(1.1);
 }
+.gamelive_container .add_setting_select_box {
+    width: 100%;
+    height: 100%;
+}
 .gamelive_container #add_setting_select {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: 90px;
     background-image: url('../assets/images/btn_add_big.svg');
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
 }

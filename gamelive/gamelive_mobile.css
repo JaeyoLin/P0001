@@ -1,6 +1,6 @@
 @media only screen and (max-width: 576px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
     .gamelive_container #box_three_balls_block {
         display: none;
@@ -16,6 +16,7 @@
     }
     .gamelive_container #box_add_setting_select {
         display: unset;
+        padding-top: 15px;
     }
     .gamelive_container #box_tools {
         flex-direction: column;
