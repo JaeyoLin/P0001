@@ -71,4 +71,11 @@
     .gamelive_container .table_container {
         max-height: 300px;
     }
+    .gamelive_container #box_tools_block_buttons {
+        justify-content: center;
+    }
+    .gamelive_container .quick_button_box {
+        width: 110px; 
+        margin-right: 10px;
+    }
 }

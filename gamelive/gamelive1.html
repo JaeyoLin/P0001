@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="flex-grow-1">
-                        <div id="area_b" style="padding-top: 10px;" class="flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
+                        <div id="area_b" style="padding-top: 10px;" class="d-flex flex-column flex-wrap ball_container align-center">
                             <div class="ball"><span class="number">1</span></div>
                             <div class="ball"><span class="number">2</span></div>
                             <div class="ball"><span class="number">3</span></div>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="flex-grow-1">
-                        <div id="area_c" style="padding-top: 10px;" class="flex-grow-1 d-flex flex-column flex-wrap ball_container align-content-center">
+                        <div id="area_c" style="padding-top: 10px;" class="d-flex flex-column flex-wrap ball_container align-center">
                             <div class="ball"><span class="number">1</span></div>
                             <div class="ball"><span class="number">2</span></div>
                             <div class="ball"><span class="number">3</span></div>
@@ -162,7 +162,7 @@
                     <div class="d-flex align-center" style="width: 100px;">
                         上期期號: 
                     </div>
-                    <div>
+                    <div class="d-flex flex-row">
                         <div class="history_ball"><span class="history_number">1</span></div>
                         <div class="history_ball"><span class="history_number">2</span></div>
                         <div class="history_ball"><span class="history_number">3</span></div>
@@ -191,19 +191,19 @@
         <div id="box_add_setting" class="d-flex flex-row">
             <div class="bok_title d-flex align-center">追號設定: </div>
             <div id="box_add_setting_button" class="flex-grow-1" style="flex-wrap: wrap;">
-                <button class="add_button">1</button>
-                <button class="add_button">2</button>
-                <button class="add_button">3</button>
-                <button class="add_button">4</button>
-                <button class="add_button">5</button>
-                <button class="add_button">10</button>
-                <button class="add_button">15</button>
-                <button class="add_button">20</button>
-                <button class="add_button">25</button>
-                <button class="add_button">30</button>
+                <div class="add_button">1</div>
+                <div class="add_button">2</div>
+                <div class="add_button">3</div>
+                <div class="add_button">4</div>
+                <div class="add_button">5</div>
+                <div class="add_button">10</div>
+                <div class="add_button">15</div>
+                <div class="add_button">20</div>
+                <div class="add_button">25</div>
+                <div class="add_button">30</div>
             </div>
             <div id="box_add_setting_select" class="flex-grow-1">
-                <div id="add_setting_select" >選擇追號</div>            
+                <div id="add_setting_select">選擇追號</div>            
             </div>
         </div>
 
@@ -213,13 +213,25 @@
                 <!-- 單位快選 -->
                 <div class="d-flex flex-row" style="margin-top: 22px;">
                     <div class="bok_title d-flex align-center">單位快選: </div>
-                    <div class="d-flex flex-grow-1" style="flex-wrap: wrap;">
-                        <button class="add_button">1</button>
-                        <button class="add_button">5</button>
-                        <button class="add_button">10</button>
-                        <button class="add_button">20</button>
-                        <button class="add_button">50</button>
-                        <button class="add_button">100</button>
+                    <div id="box_tools_block_buttons" class="d-flex flex-row flex-grow-1" style="flex-wrap: wrap;">
+                        <div class="quick_button_box">
+                            <div class="quick_button">1</div>
+                        </div>
+                        <div class="quick_button_box">
+                            <div class="quick_button">5</div>
+                        </div>
+                        <div class="quick_button_box">
+                            <div class="quick_button">10</div>
+                        </div>
+                        <div class="quick_button_box">
+                            <div class="quick_button">20</div>
+                        </div>
+                        <div class="quick_button_box">
+                            <div class="quick_button">50</div>
+                        </div>
+                        <div class="quick_button_box">
+                            <div class="quick_button">100</div>
+                        </div>
                     </div>
                 </div>
                 <div class="d-flex flex-row" style="margin-top: 22px;">
@@ -230,10 +242,10 @@
                                 <input style="width: 100%; line-height: 25px; color:black"  />
                             </div>
                             <div id="box_input_center">
-                                <button class="btn_submit">單位歸零</button> 
+                                <div class="btn_submit">單位歸零</div>
                             </div>
                             <div id="box_input_right">
-                                <button class="btn_submit">送出</button>
+                                <div class="btn_submit">送出</div>
                             </div>
                         </div>
                         <div id="box_result_1" class="d-flex align-center">

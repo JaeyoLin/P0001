@@ -94,31 +94,47 @@ body {
 }
 .gamelive_container #box_add_setting_select {
     display: none;
+    font-size: 18px;
 }
 .gamelive_container .add_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 70px;
-    height: 32px;
-    margin-right: 10px;
-    border: 1px solid #1cb585;
-    color: #FFFFFF;
-    background: rgba(40,255,187,0.35);
-    border-radius: 4px;
-}
-.gamelive_container .add_button:hover {
-    background: rgba(40,255,187,0.7);
-}
-.gamelive_container #add_setting_select {
-    min-width: 100%;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #1cb585;
-    background: rgba(40,255,187,0.35);
-    color: #FFFFFF;
-    border-radius: 4px;
+    height: 30px;
+    background-image: url('../assets/images/btn_add_small.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
-.gamelive_container #add_setting_select:hover {
-    background: rgba(40,255,187,0.7);
+.gamelive_container .add_button:hover {
+    transform: scale(1.2);
+}
+.gamelive_container .quick_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-image: url('../assets/images/btn_submit.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: #642100;
+}
+.gamelive_container .quick_button:hover {
+    transform: scale(1.1);
+}
+.gamelive_container #add_setting_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-image: url('../assets/images/btn_add_big.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 .gamelive_container #box_add_setting {
     margin-top: 20px;
@@ -138,6 +154,8 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 0px;
+    display: flex;
+    align-items: center;
 }
 .gamelive_container #box_input_center {
     width: 100%;
@@ -165,19 +183,22 @@ body {
 .gamelive_container #box_tools_result {
     margin-top: 0px;
     height: 100%;
-    min-height: 200px;
+    min-height: 250px;
 }
 .gamelive_container .btn_submit {
-    width: 100%; 
-    color: #333; 
-    background-color: #ffdf1b;
-    border: 1px solid #ffdf1b;
-    height: 32px;
-    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-image: url('../assets/images/btn_submit.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: #642100;
 }
 .gamelive_container .btn_submit:hover {
-    background-color: #e4e4e4;
-    border: 1px solid #e4e4e4;
+    transform: scale(1.1);
 }
 .gamelive_container .ball_container {
     margin: 5px;
@@ -192,33 +213,31 @@ body {
     border-radius: 10px;
 }
 .gamelive_container .history_ball {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
-    margin: 0px; 
-    border-radius: 50%;
-    position: relative;
-    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
-    overflow: hidden;
+    background-image: url('../assets/images/ball.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 5px;
 }
 .gamelive_container .history_number {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     text-align: center;
     font-size: 16px;
-    color: #FA9494;
-    margin-top: 7px;
+    color: #F0F0F0;
 }
 .gamelive_container .ball {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    margin: 3px; 
-    border-radius: 50%;
-    position: relative;
-    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/images/ball.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-right: 5px;
 }
 .gamelive_container .ball2 {
     display: inline-block;
@@ -231,20 +250,16 @@ body {
     overflow: hidden;
 }
 .gamelive_container .number {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     text-align: center;
     font-size: 14px;
-    color: #FA9494;
-    margin-top: 5px;
+    color: #F0F0F0;
 }
 
 .gamelive_container .table_container {
     overflow-x: auto;
     width: 100%;
     height: 100%;
-    max-height: 200px;
+    max-height: 300px;
     color: #ffffff;
 }
 .gamelive_container .table_header {
@@ -301,13 +316,17 @@ body {
     margin: 1px;
 }
 .gamelive_container .table_container::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #ffc0cb;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #ffc0cb;
 }
 .gamelive_container .table_container::-webkit-scrollbar {
-  width: 13px;
-  background-color: black;
+    width: 13px;
+    background-color: black;
 }
 .gamelive_container .table_container::-webkit-scrollbar-thumb {
-  background-color: #bb6573;
+    background-color: #bb6573;
+}
+.gamelive_container .quick_button_box {
+    width: 100px; 
+    margin-right: 5px;
 }
