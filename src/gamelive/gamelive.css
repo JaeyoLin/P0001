@@ -7,14 +7,14 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #585858;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #06283D;
 }
 .gamelive_container .font_color_yellow {
-    color: rgb(255, 223, 27);
+    color: #47B5FF;
 }
 .gamelive_container .font_color_green {
-    color: rgba(40,255,187,1);
+    color: #06283D;
 }
 .gamelive_container .font_bold {
     font-weight: bold;
@@ -82,7 +82,9 @@ body {
 .gamelive_container #bok_total {
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #585858;
+    background-color: #47B5FF;
+    padding: 10px;
+    border-radius: 5px;
 }
 .gamelive_container .bok_title {
     flex-basis: 80px;
@@ -99,26 +101,28 @@ body {
     width: 70px;
     height: 32px;
     margin-right: 10px;
-    border: 1px solid #1cb585;
+    border: 1px solid #256D85;
     color: #FFFFFF;
-    background: rgba(40,255,187,0.35);
+    background: #256D85;
     border-radius: 4px;
 }
 .gamelive_container .add_button:hover {
-    background: rgba(40,255,187,0.7);
+    background: #FFFFFF;
+    color: #256D85;
 }
 .gamelive_container #add_setting_select {
     min-width: 100%;
     text-align: center;
     padding: 10px;
-    border: 1px solid #1cb585;
-    background: rgba(40,255,187,0.35);
+    border: 1px solid #256D85;
+    background: #256D85;
     color: #FFFFFF;
     border-radius: 4px;
     cursor: pointer;
 }
 .gamelive_container #add_setting_select:hover {
-    background: rgba(40,255,187,0.7);
+    background: #FFFFFF;
+    color: #256D85;
 }
 .gamelive_container #box_add_setting {
     margin-top: 20px;
@@ -154,7 +158,7 @@ body {
     width: 70%;
     display: flex;
     flex-direction: column;
-    background-color: #7B7B7B;
+    background-color: #F5EDDC;
     border-radius: 5px;
     margin-left: 10px;
     margin-right: 10px;
@@ -182,13 +186,14 @@ body {
 .gamelive_container .ball_container {
     margin: 5px;
     height: 430px;
-    background-color: #F5EDDC;
+    /* background-color: #F5EDDC; */
+    background-color: #EEEEEE;
     border-radius: 10px;
 }
 .gamelive_container .ball_container2 {
     margin: 5px;
     height: 250px;
-    background-color: #F5EDDC;
+    /* background-color: #F5EDDC; */
     border-radius: 10px;
 }
 .gamelive_container .history_ball {
@@ -198,7 +203,7 @@ body {
     margin: 0px; 
     border-radius: 50%;
     position: relative;
-    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+    background: radial-gradient(circle at 50% 40%, #FFD384, #FFD384 66%, #9b5050 100%);
     overflow: hidden;
 }
 .gamelive_container .history_number {
@@ -207,7 +212,7 @@ body {
     height: 100%;
     text-align: center;
     font-size: 16px;
-    color: #FA9494;
+    color: #000000;
     margin-top: 7px;
 }
 .gamelive_container .ball {
@@ -217,7 +222,7 @@ body {
     margin: 3px; 
     border-radius: 50%;
     position: relative;
-    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+    background: radial-gradient(circle at 50% 40%, #FFD384, #FFD384 66%, #9b5050 100%);
     overflow: hidden;
 }
 .gamelive_container .ball2 {
@@ -236,7 +241,7 @@ body {
     height: 100%;
     text-align: center;
     font-size: 14px;
-    color: #FA9494;
+    color: #000000;
     margin-top: 5px;
 }
 
