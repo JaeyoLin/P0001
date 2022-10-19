@@ -10,10 +10,10 @@ body {
     background-color: #FFFFFF;
     color: #06283D;
 }
-.gamelive_container .font_color_yellow {
+.gamelive_container .font_color_light_blue {
     color: #47B5FF;
 }
-.gamelive_container .font_color_green {
+.gamelive_container .font_color_dark_blue {
     color: #06283D;
 }
 .gamelive_container .font_bold {
@@ -186,14 +186,12 @@ body {
 .gamelive_container .ball_container {
     margin: 5px;
     height: 430px;
-    /* background-color: #F5EDDC; */
     background-color: #EEEEEE;
     border-radius: 10px;
 }
 .gamelive_container .ball_container2 {
     margin: 5px;
     height: 250px;
-    /* background-color: #F5EDDC; */
     border-radius: 10px;
 }
 .gamelive_container .history_ball {
@@ -232,7 +230,7 @@ body {
     margin: 10px; 
     border-radius: 50%;
     position: relative;
-    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+    background: radial-gradient(circle at 50% 40%, #FFD384, #FFD384 66%, #9b5050 100%);
     overflow: hidden;
 }
 .gamelive_container .number {
