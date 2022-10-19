@@ -1,6 +1,6 @@
 @media only screen and (max-width: 576px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     .gamelive_container #box_three_balls_block {
         display: none;
@@ -16,7 +16,6 @@
     }
     .gamelive_container #box_add_setting_select {
         display: unset;
-        padding-top: 15px;
     }
     .gamelive_container #box_tools {
         flex-direction: column;
@@ -40,15 +39,14 @@
         width: 100%;
     }
     .gamelive_container #box_input_left {
-        width: 100%;
+        width: 33.3%;
         padding-right: 5px;
     }
     .gamelive_container #box_input_center {
-        width: 40%;
-        margin-right: 10px;
+        width: 33.3%;
     }
     .gamelive_container #box_input_right {
-        width: 40%;
+        width: 33.3%;
         padding-left: 5px;
     }
     .gamelive_container #box_result_1 {
@@ -72,12 +70,5 @@
     }
     .gamelive_container .table_container {
         max-height: 300px;
-    }
-    .gamelive_container #box_tools_block_buttons {
-        justify-content: center;
-    }
-    .gamelive_container .quick_button_box {
-        width: 110px; 
-        margin-right: 10px;
     }
 }
