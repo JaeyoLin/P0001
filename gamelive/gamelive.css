@@ -58,6 +58,9 @@ body {
 .gamelive_container .h-200 {
     height: 200px;
 }
+.gamelive_container .h-410 {
+    height: 410px;
+}
 .gamelive_container .p-1 {
     padding: 10px;
 }
@@ -66,6 +69,12 @@ body {
 }
 .gamelive_container .m-1 {
     margin: 10px;
+}
+.gamelive_container .mt-1 {
+    margin-top: 10px;
+}
+.gamelive_container .mt-2 {
+    margin-top: 20px;
 }
 .gamelive_container .w-65-per {
     width: 65%;
@@ -185,7 +194,7 @@ body {
 }
 .gamelive_container .ball_container {
     margin: 5px;
-    height: 430px;
+    height: 550px;
     background-color: #EEEEEE;
     border-radius: 10px;
 }
@@ -314,4 +323,15 @@ body {
 }
 .gamelive_container .table_container::-webkit-scrollbar-thumb {
   background-color: #84C1FF;
+}
+.gamelive_container .area_status {
+    margin: 0 auto;
+    width: 180px;
+    min-height: 100px;
+    border-radius: 5px;
+    background-color: #FD841F;
+    border-color: 1px solod #FD841F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
