@@ -27,46 +27,51 @@
                 <!-- 左上球 -->
                 <div class="d-flex flex-row" style="height: 100%; padding-right: 10px;">
                     <div class="flex-grow-1">
-                        <div id="area_a" style="padding-top: 10px;" class="d-flex flex-row flex-wrap ball_container2 align-center">
-                            <div class="ball2"><span class="number">1</span></div>
-                            <div class="ball2"><span class="number">2</span></div>
-                            <div class="ball2"><span class="number">3</span></div>
-                            <div class="ball2"><span class="number">4</span></div>
-                            <div class="ball2"><span class="number">5</span></div>
-                            <div class="ball2"><span class="number">6</span></div>
-                            <div class="ball2"><span class="number">7</span></div>
-                            <div class="ball2"><span class="number">8</span></div>
-                            <div class="ball2"><span class="number">9</span></div>
-                            <div class="ball2"><span class="number">10</span></div>
-                            <div class="ball2"><span class="number">11</span></div>
-                            <div class="ball2"><span class="number">12</span></div>
-                            <div class="ball2"><span class="number">13</span></div>
-                            <div class="ball2"><span class="number">14</span></div>
-                            <div class="ball2"><span class="number">15</span></div>
-                            <div class="ball2"><span class="number">16</span></div>
-                            <div class="ball2"><span class="number">17</span></div>
-                            <div class="ball2"><span class="number">18</span></div>
-                            <div class="ball2"><span class="number">19</span></div>
-                            <div class="ball2"><span class="number">20</span></div>
-                            <div class="ball2"><span class="number">21</span></div>
-                            <div class="ball2"><span class="number">22</span></div>
-                            <div class="ball2"><span class="number">23</span></div>
-                            <div class="ball2"><span class="number">24</span></div>
-                            <div class="ball2"><span class="number">25</span></div>
-                            <div class="ball2"><span class="number">26</span></div>
-                            <div class="ball2"><span class="number">27</span></div>
-                            <div class="ball2"><span class="number">28</span></div>
-                            <div class="ball2"><span class="number">29</span></div>
-                            <div class="ball2"><span class="number">30</span></div>
-                            <div class="ball2"><span class="number">31</span></div>
-                            <div class="ball2"><span class="number">32</span></div>
-                            <div class="ball2"><span class="number">33</span></div>
-                            <div class="ball2"><span class="number">34</span></div>
-                            <div class="ball2"><span class="number">35</span></div>
-                            <div class="ball2"><span class="number">36</span></div>
-                            <div class="ball2"><span class="number">37</span></div>
-                            <div class="ball2"><span class="number">38</span></div>
-                            <div class="ball2"><span class="number">39</span></div>
+                        <div id="area_a" style="padding-top: 10px;" class="ball_container2">
+                            <div id="area_a_status" class="area_status">
+                                waiting for the ball
+                            </div>
+                            <div class="d-flex flex-row flex-wrap align-center ">
+                                <div class="ball2"><span class="number">1</span></div>
+                                <div class="ball2"><span class="number">2</span></div>
+                                <div class="ball2"><span class="number">3</span></div>
+                                <div class="ball2"><span class="number">4</span></div>
+                                <div class="ball2"><span class="number">5</span></div>
+                                <div class="ball2"><span class="number">6</span></div>
+                                <div class="ball2"><span class="number">7</span></div>
+                                <div class="ball2"><span class="number">8</span></div>
+                                <div class="ball2"><span class="number">9</span></div>
+                                <div class="ball2"><span class="number">10</span></div>
+                                <div class="ball2"><span class="number">11</span></div>
+                                <div class="ball2"><span class="number">12</span></div>
+                                <div class="ball2"><span class="number">13</span></div>
+                                <div class="ball2"><span class="number">14</span></div>
+                                <div class="ball2"><span class="number">15</span></div>
+                                <div class="ball2"><span class="number">16</span></div>
+                                <div class="ball2"><span class="number">17</span></div>
+                                <div class="ball2"><span class="number">18</span></div>
+                                <div class="ball2"><span class="number">19</span></div>
+                                <div class="ball2"><span class="number">20</span></div>
+                                <div class="ball2"><span class="number">21</span></div>
+                                <div class="ball2"><span class="number">22</span></div>
+                                <div class="ball2"><span class="number">23</span></div>
+                                <div class="ball2"><span class="number">24</span></div>
+                                <div class="ball2"><span class="number">25</span></div>
+                                <div class="ball2"><span class="number">26</span></div>
+                                <div class="ball2"><span class="number">27</span></div>
+                                <div class="ball2"><span class="number">28</span></div>
+                                <div class="ball2"><span class="number">29</span></div>
+                                <div class="ball2"><span class="number">30</span></div>
+                                <div class="ball2"><span class="number">31</span></div>
+                                <div class="ball2"><span class="number">32</span></div>
+                                <div class="ball2"><span class="number">33</span></div>
+                                <div class="ball2"><span class="number">34</span></div>
+                                <div class="ball2"><span class="number">35</span></div>
+                                <div class="ball2"><span class="number">36</span></div>
+                                <div class="ball2"><span class="number">37</span></div>
+                                <div class="ball2"><span class="number">38</span></div>
+                                <div class="ball2"><span class="number">39</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,6 +95,39 @@
                     <iframe width="100%" height="250"
                         src="https://www.youtube.com/embed/tgbNymZ7vqY">
                     </iframe>
+                </div>
+
+                <!-- Timer 區塊 -->
+                <div id="timer_box" class="d-flex flex-column align-center justify-content-center mt-2">
+                    <div style="font-size: 14px;">距離第 <span class="font_color_red">0000000</span> 期 封盤時間: <span class="font_color_red">00:00:00</span> 開獎時間</div>
+                    <div class="d-flex flex-row align-center justify-content-center" style="width: 100%;">
+                        <div style="position: relative;">
+                            <div style="position: absolute; font-size: 62px; color: #FFFFFF; line-height: normal; left: 10px;">0</div>
+                            <img alt="" src="../assets/images/timer-bg.png" width="100%" />
+                        </div>
+                        <div style="position: relative;">
+                            <div style="position: absolute; font-size: 62px; color: #FFFFFF; line-height: normal; left: 10px;">0</div>
+                            <img alt="" src="../assets/images/timer-bg.png" width="100%" />
+                        </div>
+                        <div>：</div>
+                        <div style="position: relative;">
+                            <div style="position: absolute; font-size: 62px; color: #FFFFFF; line-height: normal; left: 10px;">0</div>
+                            <img alt="" src="../assets/images/timer-bg.png" width="100%" />
+                        </div>
+                        <div style="position: relative;">
+                            <div style="position: absolute; font-size: 62px; color: #FFFFFF; line-height: normal; left: 10px;">0</div>
+                            <img alt="" src="../assets/images/timer-bg.png" width="100%" />
+                        </div>
+                        <div>：</div>
+                        <div style="position: relative;">
+                            <div style="position: absolute; font-size: 62px; color: #FFFFFF; line-height: normal; left: 10px;">0</div>
+                            <img alt="" src="../assets/images/timer-bg.png" width="100%" />
+                        </div>
+                        <div style="position: relative;">
+                            <div style="position: absolute; font-size: 62px; color: #FFFFFF; line-height: normal; left: 10px;">0</div>
+                            <img alt="" src="../assets/images/timer-bg.png" width="100%" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -10,6 +10,9 @@ body {
     background-color: #FFFFFF;
     color: #06283D;
 }
+.gamelive_container .font_color_red {
+    color: #FF0000;
+}
 .gamelive_container .font_color_light_blue {
     color: #47B5FF;
 }
@@ -200,8 +203,9 @@ body {
 }
 .gamelive_container .ball_container2 {
     margin: 5px;
-    height: 250px;
+    height: 350px;
     border-radius: 10px;
+    background-color: #EEEEEE;
 }
 .gamelive_container .history_ball {
     display: inline-block;
