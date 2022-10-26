@@ -71,4 +71,7 @@
     .gamelive_container .table_container {
         max-height: 300px;
     }
+    .gamelive_container #timer_box {
+        display: none;
+    }
 }
