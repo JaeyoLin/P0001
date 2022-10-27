@@ -2,6 +2,7 @@
 var ADD_SEETING_DATA = null;
 
 $(function() {
+  $('[data-toggle="tooltip"]').tooltip();
   mobileSelectInit();
 
   getData();
