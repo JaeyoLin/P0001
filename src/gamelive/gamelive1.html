@@ -19,20 +19,32 @@
 </head>
 <body>
     <div class="gamelive_container">
-        <div class="d-flex" style="min-height: 350px;">
-            <div id="box_three_balls_block" class="w-65-per d-flex flex-column" style="height: 100%">
-                <div class="d-flex align-center font_bold" style="height: 45px;">
+        <!-- 20221201 Start -->
+        <div class="d-flex flex_column">
+        <!-- 20221201 End -->
+            <!-- 20221201 Start -->
+            <div id="box_three_balls_block" class="d-flex flex-column" style="height: 100%">
+            <!-- 20221201 End -->
+                <!-- 20221201 Start -->
+                <div id="box_current_number" class="d-flex align-center font_bold" style="height: 45px;">
+                <!-- 20221201 End -->
                     當期期數: <span style="margin-left: 20px;" class="font_color_light_blue">888888</span>
                 </div>
 
                 <!-- 左上球 -->
-                <div class="d-flex flex-row" style="height: 100%; padding-right: 10px;">
-                    <div class="flex-grow-1">
+                <!-- 20221201 Start -->
+                <div class="d-flex flex-row ball_box">
+                <!-- 20221201 End -->
+                    <!-- 20221201 Start -->
+                    <div class="flex_1">
+                    <!-- 20221201 End -->
                         <div id="area_a" style="padding-top: 10px;" class="ball_container">
                             <div id="area_a_status" class="area_status">
                                 等待配球
                             </div>
-                            <div class="d-flex flex-column flex-wrap align-center mt-1 h-410">
+                            <!-- 20221201 Start -->
+                            <div class="d-flex flex-column flex-wrap align-center mt-1 balls_box">
+                            <!-- 20221201 End -->
                                 <div class="ball"><span class="number">1</span></div>
                                 <div class="ball"><span class="number">2</span></div>
                                 <div class="ball"><span class="number">3</span></div>
@@ -75,12 +87,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-grow-1">
+                    <!-- 20221201 Start -->
+                    <div class="flex_1">
+                    <!-- 20221201 End -->
                         <div id="area_b" style="padding-top: 10px;" class="ball_container">
                             <div id="area_a_status" class="area_status">
                                 waiting for the ball
                             </div>
-                            <div class="d-flex flex-column flex-wrap align-center mt-1 h-410">
+                            <!-- 20221201 Start -->
+                            <div class="d-flex flex-column flex-wrap align-center mt-1 balls_box">
+                            <!-- 20221201 End -->
                                 <div class="ball"><span class="number">1</span></div>
                                 <div class="ball"><span class="number">2</span></div>
                                 <div class="ball"><span class="number">3</span></div>
@@ -123,12 +139,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex-grow-1">
+                    <!-- 20221201 Start -->
+                    <div class="flex_1">
+                    <!-- 20221201 End -->
                         <div id="area_c" style="padding-top: 10px;" class="ball_container">
                             <div id="area_a_status" class="area_status">
                                 chờ bóng
                             </div>
-                            <div class="d-flex flex-column flex-wrap align-center mt-1 h-410">
+                            <!-- 20221201 Start -->
+                            <div class="d-flex flex-column flex-wrap align-center mt-1 balls_box">
+                            <!-- 20221201 End -->
                                 <div class="ball"><span class="number">1</span></div>
                                 <div class="ball"><span class="number">2</span></div>
                                 <div class="ball"><span class="number">3</span></div>
@@ -272,6 +292,21 @@
                         <button class="add_button">100</button>
                     </div>
                 </div>
+
+                <!-- 20221201 Start -->
+                <div class="d-flex flex-row" style="margin-top: 22px;">
+                    <div class="bok_title d-flex align-center">新單位快選: </div>
+                    <div class="d-flex flex-grow-1" style="flex-wrap: wrap;">
+                        <button class="add_button">1</button>
+                        <button class="add_button">5</button>
+                        <button class="add_button">10</button>
+                        <button class="add_button">20</button>
+                        <button class="add_button">50</button>
+                        <button class="add_button">100</button>
+                    </div>
+                </div>
+                <!-- 20221201 End -->
+
                 <div class="d-flex flex-row" style="margin-top: 22px;">
                     <div class="bok_title d-flex align-center">購買單位: </div>
                     <div id="box_input" class="d-flex flex-grow-1" >
